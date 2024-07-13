@@ -37,14 +37,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Existing code...
-
-    // Initialize all collapse elements
-    var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-    var collapseList = collapseElementList.map(function (collapseEl) {
-        return new bootstrap.Collapse(collapseEl, {
-            toggle: false
-        })
-    })
-});

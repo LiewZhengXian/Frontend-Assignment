@@ -7,13 +7,12 @@ body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?fitness');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 75vh;
     display: flex;
     align-items: center;
     text-align: center;
     color: white;
 }
-
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
@@ -36,6 +35,5 @@ body {
     background-color: #f8f9fa;
 }
 
-footer {
-    margin-top: 2rem;
-}
+
+
