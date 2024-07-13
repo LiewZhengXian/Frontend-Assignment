@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FitLife - Your Fitness Journey Starts Here</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href= "../styles/home.css">
 
 </head>
@@ -30,14 +31,31 @@
 <body>
 
     <div class="container my-5">
-        <h1 class="text-center mb-5">Fitness Calculators</h1>
-        
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">BMI Calculator</h2>
+        <h1 class="text-center mb-5">Health Calculators</h1>
+        <h3 class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit leo, aliquet ac ante sit amet, aliquam convallis felis. Nunc faucibus feugiat arcu eu placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ante orci, dapibus eu volutpat id, consectetur non nulla. Pellentesque lorem ipsum, malesuada et turpis eu, posuere viverra nunc. Proin malesuada aliquam diam, a porttitor dui dapibus vitae. Pellentesque congue enim sed metus consectetur, vitae pharetra elit cursus. 
+        </h3>
+ 
+        <div class="accordion" id="calculatorsAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="bmiHeader">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#bmiCollapse" aria-expanded="false" aria-controls="bmiCollapse">
+                        Body Mass Index (BMI) Calculator
+                    </button> 
+
+                </h2>
+                <div id="bmiCollapse" class="accordion-collapse collapse show" aria-labelledby="bmiHeader" >
+                    
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on BMI" data-bs-html="true"
+                            data-bs-content="And here's some amazing content. It's very engaging. Right? <a href='https://google.com'>Link</a>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                  </svg></button>
+                        </div>
                         <form id="bmiForm">
+ 
                             <div class="mb-3">
                                 <label for="height" class="form-label">Height (cm)</label>
                                 <input type="number" class="form-control" id="height" required>
@@ -53,11 +71,27 @@
                 </div>
             </div>
             
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">Calorie Calculator</h2>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="calorieHeader">
+                    
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#calorieCollapse" aria-expanded="false" aria-controls="calorieCollapse">
+
+                          Calorie Calculator
+                    </button>
+                </h2>
+
+                <div id="calorieCollapse" class="accordion-collapse collapse" aria-labelledby="calorieHeader" >
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on BMI" data-bs-html="true"
+                            data-bs-content="And here's some amazing content. It's very engaging. Right? <a href='https://google.com'>Link</a>">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                  </svg></button>
+                        </div>
                         <form id="calorieForm">
+                            
                             <div class="mb-3">
                                 <label for="age" class="form-label">Age</label>
                                 <input type="number" class="form-control" id="age" required>
@@ -96,17 +130,78 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
-        <div class="container">
-            <p>&copy; 2024 FitLife. All rights reserved.</p>
-        </div>
-    </footer>
 
+    <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+            data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="https://www.facebook.com/utarconfessions2022/" target="_blank"
+              role="button"
+              ><i class="bi bi-facebook"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank"
+              role="button"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank"
+              role="button"
+              ><i class="bi bi-github"></i>
+              </a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy; 2024 FitLife. All rights reserved.</p>
+
+        </div>
+        <!-- Copyright -->
+      </footer>
 </body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="calculators.js"></script>
+<script src="../calculatorpage.js"></script>
 
 </html>
