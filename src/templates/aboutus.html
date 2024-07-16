@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/aboutus.css">
+    <link rel="stylesheet" href="../styles/faqQues.css">
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -23,6 +24,27 @@
                     <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            faqQNA
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="faqQues.html#research-and-information">Research and Information</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#video-in-exercise-and-fitness">Video In Exercise and Fitness</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#health-questionnaire">Health Questionnaire</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            aboutUs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="aboutus.html#aboutus">about Us</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#product">product</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#vision">vision</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#contact-section">leave a message</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -30,6 +52,7 @@
 
     <div class="container my-5">
         <section id="aboutus">
+
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-box">
@@ -42,7 +65,13 @@
                 </div>
             </div>
         </section>
-        <section id="services" class="my-5">
+        
+        <section id="product" class="my-5">
+
+            <div class="text-center">
+                <h1 class="border-title d-inline-block">Hot Sales Product</h1>
+            </div>  
+
             <div class="row">
                 <div class="col-lg-4">
                     <div class="text-box">
@@ -69,9 +98,12 @@
         </section>
     </div>
 
-    <!-- Accordion for Other Information -->
-    <div class="accordion" id="aboutAccordion">
-        <!-- Slogan -->
+    <section id="vision">
+        
+        <h1 class="border-title d-inline-block">Vision And Mission</h1>
+
+        <div class="accordion" id="aboutAccordion">
+            <!-- Slogan -->
         <div class="card">
             <div class="card-header" id="headingSlogan">
                 <h2 class="mb-0">
@@ -141,20 +173,22 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="contact-section" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1 class="text-uppercase">Contact Us</h1>
+                    <h1 class="text-uppercase">Send Us Your Comments</h1>
                     <hr style="width: 20%">
                     <p class="lead">Have questions or comments?</p>
                     <div id="alert"></div>
                 </div>
             </div>
+    
             <div class="row">
-                <form id="contact-form" method="POST">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="c3a04941-cddb-4576-8c6b-69f1f3283ee2">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
@@ -200,6 +234,32 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault(); // Prevent the default form submission
+            
+            var form = event.target;
+            var data = new FormData(form);
+    
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: data
+            }).then(function(response) {
+                return response.json();
+            }).then(function(response) {
+                if(response.success) {
+                    document.getElementById("alert").innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
+                    form.reset();
+                } else {
+                    document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+                }
+            }).catch(function(error) {
+                document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+            });
+        });
+    </script>
+    
 
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
         <div class="container p-4 pb-0">
@@ -222,7 +282,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../home.js"></script>
     <script src="../scripts/aboutus.js"></script>
-    
+
     <script>
         $(document).ready(function() {
             $('#contact-form').on('submit', function(event) {
