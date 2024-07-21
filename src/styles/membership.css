@@ -1,0 +1,126 @@
+.hero-section {
+    background-image: url('../images/member1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.container {
+    max-width: 98%;
+    padding: 0 10px;
+}
+
+.membership-row {
+    margin: 0 -10px;
+}
+
+.membership-row > div {
+    padding: 0 10px;
+}
+
+.membership-option {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.membership-option h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+}
+
+.membership-option p {
+    background-color: rgba(0,0,0,0.7);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    max-height: 120px;
+    overflow-y: auto;
+    width: 95%;
+}
+
+.membership-option .btn {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.membership-option .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.fl-plus {
+    background-image: url('../images/memberplus.jpg');
+}
+
+.fl-free {
+    background-image: url('../images/memberfree.jpg');
+}
+
+.fl-plus h2 span {
+    color: white;
+}
+
+.fl-plus h2 {
+    color: #007bff;
+}
+
+footer {
+    margin-top: 15px !important;
+}
+
+@media (max-width: 767px) {
+    .membership-option {
+        min-height: auto;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .membership-option h2 {
+        font-size: 1.75rem;
+    }
+    
+    .membership-option p {
+        font-size: 1rem;
+    }
+}
