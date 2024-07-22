@@ -1,3 +1,4 @@
+
 .hero-section {
     background-image: url('../images/member1.jpg');
     background-size: cover;
@@ -123,4 +124,49 @@ footer {
     .membership-option p {
         font-size: 1rem;
     }
+}
+
+.membership-features-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.membership-table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.membership-table th,
+.membership-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem 0.5rem;
+}
+
+.membership-table .feature-column {
+    text-align: left;
+    width: 60%;
+}
+
+.membership-table th:not(.feature-column),
+.membership-table td:not(.feature-column) {
+    width: 20%;
+}
+
+.membership-table .btn {
+    margin-top: 0.5rem;
+}
+
+.green-tick {
+    color: #28a745;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.red-cross {
+    color: #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
 }
