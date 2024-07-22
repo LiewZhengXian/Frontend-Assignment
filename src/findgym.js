@@ -16,6 +16,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 var marker, circle, lat, long, accuracy;
+var gymMarkers = [];
 
 function getPosition(position) {
   // console.log(position)
@@ -53,6 +54,11 @@ map.on('click', function(e) {
   if (marker != undefined) {
       map.removeLayer(marker);
       map.removeLayer(circle);
+  }
+  if (gymMarkers != undefined) {
+    for (let gymMarker of gymMarkers){
+    map.removeLayer(gymMarker);
+    }
   }
   marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
   circle = L.circle([e.latlng.lat, e.latlng.lng], 2000).addTo(map);
@@ -96,15 +102,17 @@ function displayGyms(gyms) {
         ul.className = 'list-group';
 
         gyms.forEach(function(gym) {
+            const query = gym.poi.name.split(' ').join('+');
             const li = document.createElement('li');
             li.className = 'list-group-item';
             li.innerHTML = `
-                <strong>${gym.poi.name}</strong><br>
+                <a href=https://www.google.com/search?q=${query}> <strong>${gym.poi.name}</strong></a><br>
                 Address: ${gym.address.freeformAddress}<br>
                 Distance: ${(gym.dist / 1000).toFixed(2)} km
             `;
             ul.appendChild(li);
-            //L.marker([gym.position.lat, gym.position.lon]).addTo(map)
+            gymMarkers.append
+            gymMarkers.push(L.marker([gym.position.lat, gym.position.lon]).addTo(map));
         });
 
         gymListElement.appendChild(ul);
