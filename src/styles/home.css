@@ -4,7 +4,7 @@ body {
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?fitness');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/carousel_img_1.jpg');
     background-size: cover;
     background-position: center;
     height: 75vh;
