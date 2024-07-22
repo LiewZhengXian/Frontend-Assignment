@@ -64,9 +64,12 @@
     margin-bottom: 15px;
     font-size: 1.1rem;
     line-height: 1.4;
-    max-height: 120px;
-    overflow-y: auto;
     width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
 .membership-option .btn {
@@ -102,6 +105,59 @@
 
 footer {
     margin-top: 15px !important;
+}
+
+.membership-features-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.membership-table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.membership-table th,
+.membership-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid #dee2e6;
+}
+
+.membership-table th:last-child,
+.membership-table td:last-child {
+    border-right: none;
+}
+
+.membership-table .feature-column {
+    text-align: left;
+    width: 50%;
+}
+
+.membership-table th:not(.feature-column),
+.membership-table td:not(.feature-column) {
+    width: 25%;
+}
+
+.membership-table .btn {
+    margin-top: 0.5rem;
+}
+
+.green-tick {
+    color: #28a745;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.red-cross {
+    color: #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 @media (max-width: 767px) {
