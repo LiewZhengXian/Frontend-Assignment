@@ -1,7 +1,5 @@
-/* membership.css */
-
 body {
-    background-image: url('../images/join-background.jpg'); /* Replace with your image path */
+    background-image: url('../images/join-background.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;

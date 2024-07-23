@@ -1,5 +1,3 @@
-// membership.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registrationForm');
     const googleSignInBtn = document.getElementById('googleSignIn');
@@ -8,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
+        console.log('Form submission prevented');
         clearErrors();
         if (validateForm()) {
             submitForm();
@@ -25,48 +24,65 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function validateForm() {
-        let isValid = true;
-        const email = document.getElementById('email').value;
-        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value.trim();
+        const username = document.getElementById('username').value.trim();
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
         const agreeTerms = document.getElementById('agreeTerms').checked;
-        const hCaptchaResponse = hcaptcha.getResponse();
 
-        if (!/\S+@\S+\.\S+/.test(email)) {
+        console.log(`Email: ${email}, Username: ${username}, Password: ${password}, Confirm Password: ${confirmPassword}, Agree Terms: ${agreeTerms}`);
+
+        if (email === '') {
+            addError('Email address is required.');
+            return false;
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
             addError('Please enter a valid email address.');
-            isValid = false;
+            return false;
         }
 
-        if (username.length < 3) {
+        if (username === '') {
+            addError('Username is required.');
+            return false;
+        } else if (username.length < 3) {
             addError('Username must be at least 3 characters long.');
-            isValid = false;
+            return false;
         }
 
-        if (password.length < 8) {
+        if (password === '') {
+            addError('Password is required.');
+            return false;
+        } else if (password.length < 8) {
             addError('Password must be at least 8 characters long.');
-            isValid = false;
+            return false;
+        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(password)) {
+            addError('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+            return false;
         }
 
-        if (password !== confirmPassword) {
+        if (confirmPassword === '') {
+            addError('Please confirm your password.');
+            return false;
+        } else if (password !== confirmPassword) {
             addError('Passwords do not match.');
-            isValid = false;
+            return false;
         }
 
         if (!agreeTerms) {
             addError('You must agree to the terms of service and privacy policy.');
-            isValid = false;
+            return false;
         }
 
-        if (hCaptchaResponse.length === 0) {
-            addError('Please complete the hCaptcha.');
-            isValid = false;
+        const captchaResponse = hcaptcha.getResponse();
+        if (captchaResponse.length === 0) {
+            addError('Please complete the captcha.');
+            return false;
         }
 
-        return isValid;
+        return true;
     }
 
     function addError(message) {
+        console.log(`Error: ${message}`);
         errorMessages.classList.remove('d-none');
         const errorElement = document.createElement('p');
         errorElement.textContent = message;
