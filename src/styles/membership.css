@@ -1,0 +1,227 @@
+
+.hero-section {
+    background-image: url('../images/member1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+    margin-bottom: 15px;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.container {
+    max-width: 98%;
+    padding: 0 10px;
+}
+
+.membership-row {
+    margin: 0 -10px;
+}
+
+.membership-row > div {
+    padding: 0 10px;
+}
+
+.membership-option {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.membership-option h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+}
+
+.membership-option p {
+    background-color: rgba(0,0,0,0.7);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    width: 95%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.membership-option .btn {
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.membership-option .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.fl-plus {
+    background-image: url('../images/memberplus.jpg');
+}
+
+.fl-free {
+    background-image: url('../images/memberfree.jpg');
+}
+
+.fl-plus h2 span {
+    color: white;
+}
+
+.fl-plus h2 {
+    color: #007bff;
+}
+
+footer {
+    margin-top: 15px !important;
+}
+
+.membership-features-container {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.membership-table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.membership-table th,
+.membership-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem 0.5rem;
+    border-right: 1px solid #dee2e6;
+}
+
+.membership-table th:last-child,
+.membership-table td:last-child {
+    border-right: none;
+}
+
+.membership-table .feature-column {
+    text-align: left;
+    width: 50%;
+}
+
+.membership-table th:not(.feature-column),
+.membership-table td:not(.feature-column) {
+    width: 25%;
+}
+
+.membership-table .btn {
+    margin-top: 0.5rem;
+}
+
+.green-tick {
+    color: #28a745;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.red-cross {
+    color: #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .membership-option {
+        min-height: auto;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .membership-option h2 {
+        font-size: 1.75rem;
+    }
+    
+    .membership-option p {
+        font-size: 1rem;
+    }
+}
+
+.membership-features-container {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.membership-table {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.membership-table th,
+.membership-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 1rem 0.5rem;
+}
+
+.membership-table .feature-column {
+    text-align: left;
+    width: 60%;
+}
+
+.membership-table th:not(.feature-column),
+.membership-table td:not(.feature-column) {
+    width: 20%;
+}
+
+.membership-table .btn {
+    margin-top: 0.5rem;
+}
+
+.green-tick {
+    color: #28a745;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.red-cross {
+    color: #dc3545;
+    font-size: 1.2em;
+    font-weight: bold;
+}

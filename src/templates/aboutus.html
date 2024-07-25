@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/aboutus.css">
+    <link rel="stylesheet" href="../styles/faqQues.css">
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            faqQNA
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="faqQues.html#research-and-information">Research and Information</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#video-in-exercise-and-fitness">Video In Exercise and Fitness</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#health-questionnaire">Health Questionnaire</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            aboutUs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="aboutus.html#aboutus">about Us</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#product">product</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#vision">vision</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#contact-section">leave a message</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <section id="aboutus">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-box">
+                        <h2>About Us</h2>
+                        <p>Welcome to FitLife, where your fitness journey begins. Our mission is to provide top-notch fitness services and resources to help you achieve your health and wellness goals. Join us and be a part of our community.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../images/aboutus.jpg" alt="About Us" class="img-fluid">
+                </div>
+            </div>
+        </section>
+        
+        <section id="product" class="my-5">
+
+            <div class="text-center">
+                <h1 class="border-title d-inline-block">Hot Sales Product</h1>
+            </div>  
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-box">
+                        <img src="../images/personal-training.jpg" alt="Personal Training" class="img-fluid service-img mb-3">
+                        <h3>Personal Training</h3>
+                        <p>Get personalized training programs tailored to your needs.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-box">
+                        <img src="../images/group-classes.jpg" alt="Group Classes" class="img-fluid service-img mb-3">
+                        <h3>Group Classes</h3>
+                        <p>Join our group classes and enjoy a variety of fitness activities.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-box">
+                        <img src="../images/nutrition-plans.jpg" alt="Nutrition Plans" class="img-fluid service-img mb-3">
+                        <h3>Nutrition Plans</h3>
+                        <p>Receive expert nutrition advice and meal plans for a healthier lifestyle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="vision">
+        
+        <h1 class="border-title d-inline-block">Vision And Mission</h1>
+
+        <div class="accordion" id="aboutAccordion">
+            <!-- Slogan -->
+        <div class="card">
+            <div class="card-header" id="headingSlogan">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseSlogan" aria-expanded="true" aria-controls="collapseSlogan">
+                        Slogan
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSlogan" class="collapse" aria-labelledby="headingSlogan"
+                data-parent="#aboutAccordion">
+                <div class="card-body">
+                    "Empower Your Health, Transform Your Life"
+                </div>
+            </div>
+        </div>
+        <!-- Mission -->
+        <div class="card">
+            <div class="card-header" id="headingMission">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="false"
+                        aria-controls="collapseMission">
+                        Mission
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseMission" class="collapse" aria-labelledby="headingMission"
+                data-parent="#aboutAccordion">
+                <div class="card-body">
+                    To inspire and support individuals in their fitness journey by providing top-notch fitness services,
+                     personalized training programs, and comprehensive wellness resources, fostering a community dedicated to 
+                     achieving optimal health and well-being.
+                </div>
+            </div>
+        </div>
+        <!-- Objectives -->
+        <div class="card">
+            <div class="card-header" id="headingObjectives">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseObjectives" aria-expanded="false"
+                        aria-controls="collapseObjectives">
+                        Objectives
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseObjectives" class="collapse" aria-labelledby="headingObjectives"
+                data-parent="#aboutAccordion">
+                <div class="card-body">
+                    <ol>
+                        <li>Personalized Fitness Programs: Offer customized training plans that cater to 
+                            individual needs and goals, ensuring each member receives the guidance and 
+                            support they need to succeed.</li>
+                        <li>Community Engagement: Foster a supportive and motivating community through group classes, 
+                            events, and online forums, encouraging members to connect, share experiences, and stay motivated.</li>
+                        <li>Holistic Wellness: Provide comprehensive wellness resources, including nutrition advice, 
+                            mental health support, and lifestyle tips, to help members achieve a balanced and healthy lifestyle.</li>
+                        <li>Continuous Improvement: Stay at the forefront of fitness trends and research, 
+                            continually updating our programs and services to deliver the most effective 
+                            and innovative fitness solutions. </li>
+                        <li>Accessibility and Inclusivity: Ensure our services are accessible to people of all 
+                            fitness levels and backgrounds, promoting inclusivity and making fitness achievable for everyone.</li>
+                        <li>Global Reach: Leverage digital platforms to reach a broader audience, offering online 
+                            training programs and virtual classes to support fitness enthusiasts worldwide.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1 class="text-uppercase">Send Us Your Comments</h1>
+                    <hr style="width: 20%">
+                    <p class="lead">Have questions or comments?</p>
+                    <div id="alert"></div>
+                </div>
+            </div>
+    
+            <div class="row">
+                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="c3a04941-cddb-4576-8c6b-69f1f3283ee2">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Name</label>
+                                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Name" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" class="form-control input-lg" id="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="phone" class="sr-only">Phone Number</label>
+                                <input type="text" class="form-control input-lg" id="phone" name="phone" placeholder="Phone Number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <label for="message" class="sr-only">Message</label>
+                                <textarea class="form-control input-lg" rows="8" id="message" name="message" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <!-- Insert hCaptcha widget here -->
+                                <div class="h-captcha" data-sitekey="e4a6d0cc-514a-487e-9f6c-f70eb6f6989e"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="submit" class="btn btn-default btn-lg btn-block" id="send" style="color: white; border: 1px solid white;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event){
+            event.preventDefault(); // Prevent the default form submission
+            
+            var form = event.target;
+            var data = new FormData(form);
+    
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: data
+            }).then(function(response) {
+                return response.json();
+            }).then(function(response) {
+                if(response.success) {
+                    document.getElementById("alert").innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
+                    form.reset();
+                } else {
+                    document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+                }
+            }).catch(function(error) {
+                document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
+            });
+        });
+    </script>
+    
+
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
+        <div class="container p-4 pb-0">
+            <section class="mb-4">
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy; 2024 FitLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../home.js"></script>
+    <script src="../scripts/aboutus.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#contact-form').on('submit', function(event) {
+                event.preventDefault();
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    method: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        alert(response.message); // Display success message
+                    },
+                    error: function(xhr, status, error) {
+                        alert('Submission failed: ' + xhr.responseText); // Display error message
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

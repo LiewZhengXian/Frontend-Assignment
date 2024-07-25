@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Membership</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/register.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="form-container">
+                    <h2 class="text-center mb-4">Join us now!</h2>
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-outline-dark social-login-btn" type="button" id="googleSignIn">
+                            <i class="bi bi-google me-2"></i>Sign up with Google
+                        </button>
+                        <button class="btn btn-outline-primary social-login-btn" type="button" id="facebookSignIn">
+                            <i class="bi bi-facebook me-2"></i>Sign up with Facebook
+                        </button>
+                    </div>
+                    <div class="or-divider">
+                        <span>OR</span>
+                    </div>
+                    <form id="registrationForm">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <div id="h-captcha" class="h-captcha" data-sitekey="585e5158-327a-4c3e-a6fe-6d2e6ffe2086"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">I agree to the Fitness Blender terms of service and privacy policy</label>
+                        </div>
+                        <div id="errorMessages" class="alert alert-danger d-none"></div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Join</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-3">Already a member? <a href="login.html" class="text-primary">Sign In now!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
+        <div class="container p-4 pb-0">
+          <section class="mb-4">
+            <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+            <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
+            <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+            <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
+            <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy; 2024 FitLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="register.js"></script>
+</body>
+</html>

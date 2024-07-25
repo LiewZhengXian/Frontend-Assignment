@@ -1,0 +1,76 @@
+body {
+    background-image: url('../images/join-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    background-color: #aec7e0; /* Fallback color */
+}
+
+.form-container {
+    max-width: 350px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-login-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.or-divider::before,
+.or-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ddd;
+}
+
+.or-divider span {
+    padding: 0 10px;
+    color: #6c757d;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.text-primary:hover {
+    color: #0056b3 !important;
+    text-decoration: underline;
+}
+
+footer {
+    margin-top: 2rem;
+}
+
+.h-captcha {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
