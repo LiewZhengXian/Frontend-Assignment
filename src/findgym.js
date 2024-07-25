@@ -17,27 +17,56 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var marker, circle, lat, long, accuracy;
 var gymMarkers = [];
+var locateMeButton = document.getElementById('locateMeButton');
+locateMeButton.addEventListener('click', function() {
+  if (!navigator.geolocation) {
+    console.log("Your browser doesn't support geolocation feature!");
+  } else {
+
+
+    navigator.geolocation.getCurrentPosition(getPosition)
+
+  }
+});
 
 function getPosition(position) {
   // console.log(position)
   lat = parseFloat(position.coords.latitude);
   long = parseFloat(position.coords.longitude);
-  accuracy = 1000;
+  accuracy = 2000;
 
-  if (marker) {
+  if (marker != undefined) {
     map.removeLayer(marker);
-  }
-
-  if (circle) {
     map.removeLayer(circle);
   }
-
+  if (gymMarkers != undefined) {
+  for (let gymMarker of gymMarkers){
+  map.removeLayer(gymMarker);
+  }
+}
   marker = L.marker([lat, long]);
   circle = L.circle([lat, long], { radius: accuracy });
 
   var featureGroup = L.featureGroup([marker, circle]).addTo(map);
 
   map.fitBounds(featureGroup.getBounds());
+  document.getElementById('coordinates').innerHTML = 
+  'Latitude: ' + lat.toFixed(6) + ', Longitude: ' + long.toFixed(6);
+fetch(`https://api.tomtom.com/search/2/poiSearch/gym.json?key=${API_KEY}&lat=${lat}&lon=${long}&radius=2000&limit=10`)
+  .then(response => {
+      if (!response.ok) {
+          throw new Error('Failed to retrieve gyms');
+      }
+      return response.json();
+
+  })
+  .then(data => {
+
+
+    displayGyms(data.results);
+  })
+
+  .catch(error => console.error('Error searching for gyms:', error))
 
   console.log(
     "Your coordinate is: Lat: " +
@@ -87,7 +116,6 @@ map.on('click', function(e) {
 
 });
 
-
 function displayGyms(gyms) {
         console.log(gyms);
         const gymListElement = document.getElementById('gymList');
@@ -106,7 +134,7 @@ function displayGyms(gyms) {
             const li = document.createElement('li');
             li.className = 'list-group-item';
             li.innerHTML = `
-                <a href=https://www.google.com/search?q=${query}> <strong>${gym.poi.name}</strong></a><br>
+                <a href=https://www.google.com/search?q=${query} target = "_blank"> <strong>${gym.poi.name}</strong></a><br>
                 Address: ${gym.address.freeformAddress}<br>
                 Distance: ${(gym.dist / 1000).toFixed(2)} km
             `;
