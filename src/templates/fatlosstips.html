@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Membership</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/membership.css">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+        .hero {
+            background: url('../images/tips.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: rgb(39, 225, 60);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: rgb(255, 255, 255);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .features, .testimonials {
+            padding: 4rem 0;
+        }
+        .features .icon, .testimonials .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .cta {
+            background: #28a745;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 2rem;
+            display: inline-block;
+        }
+        footer .social-media a {
+            margin: 0 10px;
+        }
+        .flip-cards .container {
+            padding: 4rem 0;
+        }
+        .flip-card {
+            background-color: transparent;
+            perspective: 1000px;
+            margin-bottom: 1rem;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        .flip-card-inner.flipped {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .flip-card-front {
+            background-color: #fff;
+        }
+        .flip-card-back {
+            background-color: #f8f9fa;
+            color: black;
+            transform: rotateY(180deg);
+        }
+        .emoji {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 1rem;
+        }
+        .row .col-md-4 {
+            padding: 10px;
+        }
+        .faq .accordion-button {
+            font-size: 1.2rem;
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .loading-spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loading-spinner .spinner-border {
+            width: 3rem;
+            height: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-spinner">
+        <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">FitLife</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            FatLossTips
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="fatlosstips.html#home">Home</a></a></li>
+                            <li><a class="dropdown-item" href="fatlosstips.html#features">Wisdom</a></li>
+                            <li><a class="dropdown-item" href="fatlosstips.html#flip-cards">Discover More</a></li>
+                            <li><a class="dropdown-item" href="fatlosstips.html##faq">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            faq
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="faqQues.html#research-and-information">Research and Information</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#video-in-exercise-and-fitness">Video In Exercise and Fitness</a></li>
+                            <li><a class="dropdown-item" href="faqQues.html#health-questionnaire">Health Questionnaire</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            aboutUs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="aboutus.html#aboutus">about Us</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#product">product</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#vision">vision</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#about-section">Journey</a></li>
+                            <li><a class="dropdown-item" href="aboutus.html#contact-section">leave a message</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Transform Your Life</h1>
+            <p>Join our community for fat loss and muscle gain tips</p>
+            <a href="#features" class="cta">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container text-center">
+            <h2>Our Wisdom</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-lightning"></i></div>
+                    <h3>Effective Tips</h3>
+                    <p>Proven strategies to help you lose fat and gain muscle.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-graph-up"></i></div>
+                    <h3>Progress Tracking</h3>
+                    <p>Track your progress and stay motivated on your journey.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-heart"></i></div>
+                    <h3>Community Support</h3>
+                    <p>Join a community of like-minded individuals for support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flip Cards Section -->
+    <section class="flip-cards" id="flip-cards">
+        <div class="container text-center">
+            <h2>Discover More</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🔥</span>
+                                <h3>Card 1</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: What is the best diet for fat loss? <br>A: A balanced diet with a calorie deficit, rich in lean proteins, vegetables, and whole grains.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">💪</span>
+                                <h3>Card 2</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: How often should I work out to gain muscle? <br>A: Aim for strength training 3-4 times per week.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🍎</span>
+                                <h3>Card 3</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: Can I lose fat and gain muscle at the same time? <br>A: Yes, with proper nutrition and exercise, it's possible to achieve both.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🚀</span>
+                                <h3>Card 4</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: What is a good post-workout meal for muscle gain? <br>A: A mix of protein and carbohydrates, like chicken with brown rice.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🌟</span>
+                                <h3>Card 5</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: How much protein do I need daily for muscle growth? <br>A: About 1.6-2.2 grams of protein per kilogram of body weight.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">⚡</span>
+                                <h3>Card 6</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: Is cardio necessary for fat loss? <br>A: Cardio helps burn calories, but strength training also boosts metabolism and aids fat loss.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🔥</span>
+                                <h3>Card 7</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: What is the role of sleep in muscle gain and fat loss? <br>A: Quality sleep is crucial for recovery, muscle growth, and hormonal balance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">💪</span>
+                                <h3>Card 8</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: How can I stay motivated on my fitness journey? <br>A: Set realistic goals, track progress, and find a workout routine you enjoy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <span class="emoji">🍎</span>
+                                <h3>Card 9</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>Q: What are effective exercises for muscle gain? <br>A: Compound exercises like squats, deadlifts, and bench presses are highly effective.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What is the best diet for fat loss?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            A balanced diet with a calorie deficit, rich in lean proteins, vegetables, and whole grains.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How often should I work out to gain muscle?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Aim for strength training 3-4 times per week.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Can I lose fat and gain muscle at the same time?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Yes, with proper nutrition and exercise, it's possible to achieve both.
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more FAQ items here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials bg-light">
+        <div class="container text-center">
+            <h2>What Others Say</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-person-circle"></i></div>
+                    <p>"I've never felt better! The tips are easy to follow and really work."</p>
+                    <p>- Alex</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-person-circle"></i></div>
+                    <p>"The community support keeps me motivated every day."</p>
+                    <p>- Jamie</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="icon"><i class="bi bi-person-circle"></i></div>
+                    <p>"I've seen incredible progress in just a few weeks."</p>
+                    <p>- Sam</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container p-4 pb-0">
+            <section class="mb-4 social-media">
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy; 2024 FitLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Loading animation
+        $(window).on('load', function() {
+            $('.loading-spinner').fadeOut('slow');
+        });
+
+        // Flip card
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.querySelector('.flip-card-inner').classList.toggle('flipped');
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight active section in navbar
+        $(window).on('scroll', function() {
+            var scrollDistance = $(window).scrollTop();
+            $('section').each(function(i) {
+                if ($(this).position().top <= scrollDistance) {
+                    $('.navbar-nav .nav-link.active').removeClass('active');
+                    $('.navbar-nav .nav-link').eq(i).addClass('active');
+                }
+            });
+        }).scroll();
+
+        // Back to top button
+        var backToTopBtn = document.getElementById('back-to-top');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopBtn.style.display = "flex";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        backToTopBtn.addEventListener('click', function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+    </script>
+</body>
+</html>
