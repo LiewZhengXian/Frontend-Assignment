@@ -40,3 +40,15 @@ app.post('/send-email', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.js-scroll-trigger');
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
+

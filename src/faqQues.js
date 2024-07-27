@@ -18,11 +18,37 @@ $(document).ready(function() {
     });
 });
 
-border-title {
-    border: 2px solid #000; /* Adjust the border color and width as needed */
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-    display: inline-block;
-    margin-bottom: 20px; /* Adjust the margin as needed */
-}
+
+document.getElementById('health-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Perform form validation here if necessary
+
+    // Show the modal after successful submission
+    var submissionModal = new bootstrap.Modal(document.getElementById('submissionModal'), {
+        keyboard: false
+    });
+    submissionModal.show();
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('#health-form');
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Assuming form validation passed
+        const isValid = form.checkValidity();
+        if (isValid) {
+            // Show the modal
+            const submissionModal = new bootstrap.Modal(document.getElementById('submissionModal'));
+            submissionModal.show();
+
+            // Delay for 3 seconds then refresh the page
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        }
+    });
+});
 
