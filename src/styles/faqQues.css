@@ -1,5 +1,4 @@
 body {
-    background-image: url('../images/bcimg.jpg'); /* Update with the correct path to your background image */
     background-size: cover; /* Ensure the image covers the whole background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed on scroll */
@@ -25,6 +24,17 @@ body {
     background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
     display: inline-block;
     margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+.hero {
+    background: url('your-background-image-url.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
 }
 
 
