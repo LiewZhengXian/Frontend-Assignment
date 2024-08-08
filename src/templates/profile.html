@@ -1,36 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <style>
-        body {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="../styles/template.css"> <!-- Link to the template CSS file -->
+  <style>
+    html, body {
+      height: 100%; /* Ensure body takes full height */
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      background-color: #f0f2f5; /* Light background color for the body */
+    }
+
+    .profile-container {
+      max-width: 1000px; /* Increased max-width for larger container */
+      margin: 60px auto; /* Increased margin for more spacing */
+      padding: 30px; /* Increased padding for more space inside container */
+      display: flex;
+      align-items: center;
+      border: 1px solid #dee2e6;
+      border-radius: .375rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Slightly increased shadow */
+      background-color: #ffffff; /* White background for the profile container */
+    }
+
+    .profile-picture {
+      font-size: 120px; /* Increased font size for the profile icon */
+      color: #6c757d;
+      margin-right: 30px; /* Increased margin for more space */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f8f9fa;
+      width: 140px; /* Increased width */
+      height: 140px; /* Increased height */
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .profile-info h1 {
+      font-size: 2rem; /* Increased font size for h1 */
+      margin-bottom: 25px; /* Increased margin-bottom for more space */
+      color: #212529; /* Dark text color */
+    }
+
+    .profile-info h1 a {
+      font-weight: bold; /* Bold the link text */
+      color: #007bff; /* Bootstrap primary color */
+    }
+
+    .profile-details {
+      margin-top: 25px; /* Increased margin-top for more spacing */
+    }
+
+    .profile-details p {
+      font-size: 1.25rem; /* Increased font size for paragraph text */
+      margin-bottom: 15px; /* Increased margin-bottom for more spacing */
+      color: #495057; /* Darker text color for details */
+    }
+
+    .profile-details strong {
+      display: block;
+      font-weight: bold;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    footer {
+      margin-top: 3rem; /* Increased margin-top for more spacing from content */
+    }
+
+    .content {
+      flex: 1; /* Take up remaining space */
+    }
+  </style>
 </head>
 <body>
-    <h1 id="welcomeMessage">Hello</h1>
-    <button id="logoutButton" class="hidden">Logout</button>
-    <script>
-        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-        if (currentUser) {
-            document.getElementById('welcomeMessage').innerHTML = `Hello ${currentUser.username}, your email is ${currentUser.email}`;
-            document.getElementById('logoutButton').classList.remove('hidden');
-        } else {
-            document.getElementById('welcomeMessage').innerHTML = `Hello, please <a href='login.html'>login</a>.`;
-        }
 
-        document.getElementById('logoutButton').addEventListener('click', function() {
-            sessionStorage.removeItem('currentUser');
-            document.cookie = 'rememberedUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            window.location.href = 'login.html';
-        });
-    </script>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+              Healthy Tips
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+              <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+              <a href="foodtips.html">Food Tips</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+              <a href="aboutus.html">About Us</a>
+              <a href="ourteam.html">Our Team</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownTools">
+              <a href="calculatorpage.html">BMI Calculator</a>
+              <a href="findgym.html">Find Gym</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+              <i class="bi bi-person profile-icon"></i> Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a href="membership.html">JOIN US</a>
+              <a href="profile.html">SIGN IN</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container content">
+    <div class="profile-container">
+      <div class="profile-picture">
+        <i class="bi bi-person"></i>
+      </div>
+      <div class="profile-info">
+        <h1 id="welcomeMessage">Hello, please <a href='login.html'>login</a>.</h1>
+        <div id="userDetails" class="profile-details">
+          <!-- Details will be inserted by JavaScript -->
+        </div>
+        <button id="logoutButton" class="btn btn-danger hidden">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
+        <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
+      </section>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      <p>&copy; 2024 FitLife. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+    const userDetailsDiv = document.getElementById('userDetails');
+
+    if (currentUser) {
+        document.getElementById('welcomeMessage').innerHTML = `Hello <strong>${currentUser.username}</strong>, Welcome back!`;
+        userDetailsDiv.innerHTML = `
+            <p><strong>Username:</strong> ${currentUser.username}</p>
+            <p><strong>Email:</strong> ${currentUser.email}</p>
+        `;
+        document.getElementById('logoutButton').classList.remove('hidden');
+    } else {
+        document.getElementById('welcomeMessage').innerHTML = `Hello, Please <a href='login.html'>Login</a> First!`;
+        userDetailsDiv.innerHTML = ''; // Clear user details if not logged in
+    }
+
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        sessionStorage.removeItem('currentUser');
+        document.cookie = 'rememberedUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        window.location.href = 'login.html';
+    });
+  </script>
 </body>
 </html>
