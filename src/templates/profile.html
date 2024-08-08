@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="welcomeMessage">Hello</h1>
+    <button id="logoutButton" class="hidden">Logout</button>
+    <script>
+        const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+        if (currentUser) {
+            document.getElementById('welcomeMessage').innerHTML = `Hello ${currentUser.username}, your email is ${currentUser.email}`;
+            document.getElementById('logoutButton').classList.remove('hidden');
+        } else {
+            document.getElementById('welcomeMessage').innerHTML = `Hello, please <a href='login.html'>login</a>.`;
+        }
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            sessionStorage.removeItem('currentUser');
+            document.cookie = 'rememberedUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
