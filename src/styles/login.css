@@ -68,3 +68,8 @@ body {
 footer {
     margin-top: 2rem;
 }
+
+.alert {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
