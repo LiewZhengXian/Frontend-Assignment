@@ -46,9 +46,13 @@
       
     <div class = "row">
 
-        <div id="map" style = " height: 50vh;"></div>
-        <div id = "locateMeButton" class="container text-center"><button type="button" class="btn btn-link">Locate Me </button></div>
+        <div id="map" class = "p-3 rounded-2" style = "  border: 5px var(--bs-light-border-subtle) solid; height: 50vh;"></div>
+        <div id = "locateMeButton" class="container text-center "><button type="button" class="btn btn-link">Locate Me </button></div>
         <div id="coordinates" class="mt-3 text-center"></div>
+        <div id="info" class="p-3 rounded-2" style =  "background-color: var(--bs-light);">
+          <b>Pin a coordinate by clicking on the map</b> or press the locate me button. <br><br>
+          This will gather gyms in a 2km radius.
+      </div>
         <div id="gymList" class="mt-3"></div>
       </div>
 

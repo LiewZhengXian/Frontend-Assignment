@@ -1,4 +1,4 @@
-const API_KEY = '';
+const API_KEY = 'sqj8xQXg9BYHTkXHI5KkCLGSNWdsyyHM';
 
 var map = L.map('map').setView([4.3336777,101.1337836], 50);
 if (!navigator.geolocation) {
@@ -22,8 +22,6 @@ locateMeButton.addEventListener('click', function() {
   if (!navigator.geolocation) {
     console.log("Your browser doesn't support geolocation feature!");
   } else {
-
-
     navigator.geolocation.getCurrentPosition(getPosition)
 
   }
@@ -130,7 +128,8 @@ function displayGyms(gyms) {
         ul.className = 'list-group';
 
         gyms.forEach(function(gym) {
-            const query = gym.poi.name.split(' ').join('+');
+            const query = `${gym.poi.name} ${gym.address.freeformAddress}`.split(' ').join('+');
+
             const li = document.createElement('li');
             li.className = 'list-group-item';
             li.innerHTML = `

@@ -37,3 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+window.sr = ScrollReveal();
+sr.reveal('#first',{
+    duration: 2000,
+    origin: 'left',
+    distance: '300px'
+});
