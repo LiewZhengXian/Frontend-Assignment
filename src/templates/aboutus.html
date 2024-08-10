@@ -9,50 +9,85 @@
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/aboutus.css">
     <link rel="stylesheet" href="../styles/faqQues.css">
-    <script src="https://hcaptcha.com/1/api.js" async defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/template.css">
+    
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            faqQNA
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="faqQues.html#research-and-information">Research and Information</a></li>
-                            <li><a class="dropdown-item" href="faqQues.html#video-in-exercise-and-fitness">Video In Exercise and Fitness</a></li>
-                            <li><a class="dropdown-item" href="faqQues.html#health-questionnaire">Health Questionnaire</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            aboutUs
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="aboutus.html#aboutus">about Us</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#product">product</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#vision">vision</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#contact-section">leave a message</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+              <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+                  Healthy Tips
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+                  <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+                  <a href="foodtips.html">Food Tips</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+                  <a href="aboutus.html">About Us</a>
+                  <a href="ourteam.html">Our Team</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+                  Tools
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownTools">
+                  <a href="calculatorpage.html">BMI Calculator</a>
+                  <a href="findgym.html">Find Gym</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+                  <i class="bi bi-person profile-icon"></i> Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                  <a href="membership.html">JOIN US</a>
+                  <a href="profile.html">SIGN IN</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-
+      </nav>
+    <section id="aboutus">
+        <header class="masthead">
+            <div class="container h-100">
+                    <div class="row h-100 align-items-center justify-content-center text-center">
+                        <div class="col-lg-10 align-self-end">
+                            <h1 class="text-white font-weight-bold header-text-box">Welcome To FitLife</h1>
+                        </div>
+                        <div class="col-lg-8 align-self-baseline">
+                            <p1 class="text-white font-weight-light mb-5 header-text-box">It's Nice To Meet You</p1>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#aboutus1">Tell Me More</a>
+                        </div>
+                    </div>
+            </div>
+            <video autoplay muted loop id="video-background">
+                <source src="../videos/bgaboutus.mp4" type="video/mp4">
+            </video>
+        </header>
+    </section>
+    
+    
+    
     <div class="container my-5">
-        <section id="aboutus">
-
+        <section id="aboutus1">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-box">
@@ -66,115 +101,141 @@
             </div>
         </section>
         
-        <section id="product" class="my-5">
-
-            <div class="text-center">
-                <h1 class="border-title d-inline-block">Hot Sales Product</h1>
-            </div>  
-
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <img src="../images/personal-training.jpg" alt="Personal Training" class="img-fluid service-img mb-3">
-                        <h3>Personal Training</h3>
-                        <p>Get personalized training programs tailored to your needs.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <img src="../images/group-classes.jpg" alt="Group Classes" class="img-fluid service-img mb-3">
-                        <h3>Group Classes</h3>
-                        <p>Join our group classes and enjoy a variety of fitness activities.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="text-box">
-                        <img src="../images/nutrition-plans.jpg" alt="Nutrition Plans" class="img-fluid service-img mb-3">
-                        <h3>Nutrition Plans</h3>
-                        <p>Receive expert nutrition advice and meal plans for a healthier lifestyle.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
 
     <section id="vision">
-        
-        <h1 class="border-title d-inline-block">Vision And Mission</h1>
+    <h1 class="d-inline-block">Vision And Mission</h1>
 
-        <div class="accordion" id="aboutAccordion">
-            <!-- Slogan -->
-        <div class="card">
-            <div class="card-header" id="headingSlogan">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSlogan" aria-expanded="true" aria-controls="collapseSlogan">
-                        Slogan
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseSlogan" class="collapse" aria-labelledby="headingSlogan"
-                data-parent="#aboutAccordion">
-                <div class="card-body">
-                    "Empower Your Health, Transform Your Life"
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Slogan</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>"Empower Your Health, Transform Your Life"</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Mission -->
-        <div class="card">
-            <div class="card-header" id="headingMission">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseMission" aria-expanded="false"
-                        aria-controls="collapseMission">
-                        Mission
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseMission" class="collapse" aria-labelledby="headingMission"
-                data-parent="#aboutAccordion">
-                <div class="card-body">
-                    To inspire and support individuals in their fitness journey by providing top-notch fitness services,
-                     personalized training programs, and comprehensive wellness resources, fostering a community dedicated to 
-                     achieving optimal health and well-being.
+        <div class="col-lg-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Mission</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>To inspire and support individuals in their fitness journey by providing top-notch fitness services,
+                            personalized training programs, and comprehensive wellness resources, fostering a community dedicated to 
+                            achieving optimal health and well-being.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Objectives -->
-        <div class="card">
-            <div class="card-header" id="headingObjectives">
-                <h2 class="mb-0">
-                    <button class="btn btn-link btn-block text-left collapsed" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#collapseObjectives" aria-expanded="false"
-                        aria-controls="collapseObjectives">
-                        Objectives
-                    </button>
-                </h2>
-            </div>
-            <div id="collapseObjectives" class="collapse" aria-labelledby="headingObjectives"
-                data-parent="#aboutAccordion">
-                <div class="card-body">
-                    <ol>
-                        <li>Personalized Fitness Programs: Offer customized training plans that cater to 
-                            individual needs and goals, ensuring each member receives the guidance and 
-                            support they need to succeed.</li>
-                        <li>Community Engagement: Foster a supportive and motivating community through group classes, 
-                            events, and online forums, encouraging members to connect, share experiences, and stay motivated.</li>
-                        <li>Holistic Wellness: Provide comprehensive wellness resources, including nutrition advice, 
-                            mental health support, and lifestyle tips, to help members achieve a balanced and healthy lifestyle.</li>
-                        <li>Continuous Improvement: Stay at the forefront of fitness trends and research, 
-                            continually updating our programs and services to deliver the most effective 
-                            and innovative fitness solutions. </li>
-                        <li>Accessibility and Inclusivity: Ensure our services are accessible to people of all 
-                            fitness levels and backgrounds, promoting inclusivity and making fitness achievable for everyone.</li>
-                        <li>Global Reach: Leverage digital platforms to reach a broader audience, offering online 
-                            training programs and virtual classes to support fitness enthusiasts worldwide.</li>
-                    </ol>
+        <div class="col-lg-4">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <h3>Objectives</h3>
+                    </div>
+                    <div class="flip-card-back">
+                        <ol>
+                            <li>Personalized Fitness Programs: Offer customized training plans that cater to individual needs and goals, ensuring each member receives the guidance and support they need to succeed.</li>
+                            <li>Community Engagement: Foster a supportive and motivating community through group classes, events, and online forums, encouraging members to connect, share experiences, and stay motivated.</li>
+                            <li>Holistic Wellness: Provide comprehensive wellness resources, including nutrition advice, mental health support, and lifestyle tips, to help members achieve a balanced and healthy lifestyle.</li>
+                            <li>Continuous Improvement: Stay at the forefront of fitness trends and research, continually updating our programs and services to deliver the most effective and innovative fitness solutions.</li>
+                            <li>Accessibility and Inclusivity: Ensure our services are accessible to people of all fitness levels and backgrounds, promoting inclusivity and making fitness achievable for everyone.</li>
+                            <li>Global Reach: Leverage digital platforms to reach a broader audience, offering online training programs and virtual classes to support fitness enthusiasts worldwide.</li>
+                        </ol>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="sliding-section">
+        <div class="text-center">
+            <h2>WHERE IS THE FIT LIFE?</h2>
+            <p>Everywhere.</p>
+            <p>The globalization of the world has made it critical to be a part of a world-spanning network.</p>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider-line">
+                <img src="../images/image1.jpeg" alt="Image 1">
+                <img src="../images/image2.jpg" alt="Image 2">
+                <img src="../images/image3.jpeg" alt="Image 3">
+                <img src="../images/image4.jpg" alt="Image 4">
+                <img src="../images/image5.jpg" alt="Image 5">
+            </div>
+        </div>
+        <div class="slider-wrapper">
+            <div class="slider-line slider-line-reverse">
+                <img src="../images/image6.jpeg" alt="Image 6">
+                <img src="../images/image7.jpg" alt="Image 7">
+                <img src="../images/image8.jpg" alt="Image 8">
+                <img src="../images/image9.jpg" alt="Image 9">
+                <img src="../images/image10.jpg" alt="Image 10">
             </div>
         </div>
     </section>
 
+    <section id = "about-section">
+        <section class="about-section">
+            <h2>ABOUT</h2>
+            <p>A thousands miles start with a single step.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <img src="../images/1.jpg" alt="Our First Step">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2010-2016</h3>
+                        <h4>Our First Step</h4>
+                        <p>It is very important for the customer to pay attention to the customer's needs. They are such that the wise man rejects the whole of his pleasures at times, whence it is indeed to be refused, but, they also fall, and with what pain the praisers are followed!</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <img src="../images/2.jpg" alt="An Agency is Born">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>March 2016</h4>
+                        <h4>An Agency is Born</h4>
+                        <p>The box sat on the desk next to the computer. It had arrived earlier in the day and business had interrupted her opening it earlier. She didn't who had sent it and briefly wondered who it might have been. As she began to unwrap it, she had no idea that opening it would completely change her life.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <img src="../images/3.jpg" alt="Transition to Full Service">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>December 2020</h3>
+                        <h4>Transition to Full Service</h4>
+                        <p>She heard the loud impact before she ever saw the result. It had been so loud that it had actually made her jump back in her seat. As soon as she recovered from the surprise, she saw the crack in the windshield. It seemed to be an analogy of the current condition of her life</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <img src="../images/4.jpg" alt="Phase Two Expansion">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>July 2024</h3>
+                        <h4>Phase Two Expansion</h4>
+                        <p>They told her that this was her once chance to show the world what she was made of. She believed them at the time. It was the big stage and she knew the world would be there to see. The only one who had disagreed with this sentiment was her brother. He had told her that you don't show the world what you're made of when they are all watching, you show that in your actions when nobody was looking. It was looking more and more like her brother was correct.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-img">
+                        <div class="timeline-img-text">Be Part Of Our Story!</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
     <section id="contact-section" class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row">
@@ -187,19 +248,19 @@
             </div>
     
             <div class="row">
-                <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="c3a04941-cddb-4576-8c6b-69f1f3283ee2">
+                <form id="contact-form">
+                    <input type="hidden" name="access_key" value="5d489732-0df5-48ca-ac9d-b436bccb0b2a">
                     <div class="row">
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="name" class="sr-only">Name</label>
-                                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Name" required>
+                                <input type="text" class="form-control input-lg" id="name" name="name" placeholder="Name">
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="email" class="sr-only">Email</label>
-                                <input type="email" class="form-control input-lg" id="email" name="email" placeholder="Email" required>
+                                <input type="email" class="form-control input-lg" id="email" name="email" placeholder="Email">
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -227,38 +288,13 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-12">
-                            <button type="submit" class="btn btn-default btn-lg btn-block" id="send" style="color: white; border: 1px solid white;">Submit</button>
+                            <button type="submit" class="btn btn-default btn-lg btn-block" id="send" style="color: white; border: 1px solid white;">ContactUs</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-    
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event){
-            event.preventDefault(); // Prevent the default form submission
-            
-            var form = event.target;
-            var data = new FormData(form);
-    
-            fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: data
-            }).then(function(response) {
-                return response.json();
-            }).then(function(response) {
-                if(response.success) {
-                    document.getElementById("alert").innerHTML = '<div class="alert alert-success">Your message has been sent successfully!</div>';
-                    form.reset();
-                } else {
-                    document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
-                }
-            }).catch(function(error) {
-                document.getElementById("alert").innerHTML = '<div class="alert alert-danger">There was an error sending your message. Please try again later.</div>';
-            });
-        });
-    </script>
     
 
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
@@ -276,30 +312,26 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../jquery-3.7.1.min.js"></script>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../home.js"></script>
-    <script src="../scripts/aboutus.js"></script>
+    <script src="../aboutus.js"></script>
 
     <script>
-        $(document).ready(function() {
-            $('#contact-form').on('submit', function(event) {
-                event.preventDefault();
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
-                $.ajax({
-                    url: $(this).attr('action'),
-                    method: 'POST',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        alert(response.message); // Display success message
-                    },
-                    error: function(xhr, status, error) {
-                        alert('Submission failed: ' + xhr.responseText); // Display error message
-                    }
-                });
-            });
+            const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"]').value;
+            if (!hCaptchaResponse) {
+                alert('Please complete the hCaptcha.');
+                return;
+            }
+
+            alert('Response received');
+            window.location.reload();
         });
     </script>
 </body>

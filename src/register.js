@@ -1,111 +1,52 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registrationForm');
-    const googleSignInBtn = document.getElementById('googleSignIn');
-    const facebookSignInBtn = document.getElementById('facebookSignIn');
-    const errorMessages = document.getElementById('errorMessages');
+document.getElementById("password").addEventListener("blur", function () {
+    const password = document.getElementById("password").value;
+    const passwordFeedback = document.getElementById("passwordFeedback");
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        console.log('Form submission prevented');
-        clearErrors();
-        if (validateForm()) {
-            submitForm();
-        }
-    });
+    if (password.length < 8) {
+        passwordFeedback.textContent = "Password must be at least 8 characters long";
+    } else {
+        passwordFeedback.textContent = "";
+    }
+});
 
-    googleSignInBtn.addEventListener('click', function() {
-        console.log('Google sign-in clicked');
-        // Implement Google sign-in logic
-    });
+document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    facebookSignInBtn.addEventListener('click', function() {
-        console.log('Facebook sign-in clicked');
-        // Implement Facebook sign-in logic
-    });
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const captchaResponse = hcaptcha.getResponse();
 
-    function validateForm() {
-        const email = document.getElementById('email').value.trim();
-        const username = document.getElementById('username').value.trim();
-        const password = document.getElementById('password').value;
-        const confirmPassword = document.getElementById('confirmPassword').value;
-        const agreeTerms = document.getElementById('agreeTerms').checked;
+    const errorMessages = document.getElementById("errorMessages");
+    errorMessages.classList.add("d-none");
+    errorMessages.innerHTML = "";
 
-        console.log(`Email: ${email}, Username: ${username}, Password: ${password}, Confirm Password: ${confirmPassword}, Agree Terms: ${agreeTerms}`);
-
-        if (email === '') {
-            addError('Email address is required.');
-            return false;
-        } else if (!/\S+@\S+\.\S+/.test(email)) {
-            addError('Please enter a valid email address.');
-            return false;
-        }
-
-        if (username === '') {
-            addError('Username is required.');
-            return false;
-        } else if (username.length < 3) {
-            addError('Username must be at least 3 characters long.');
-            return false;
-        }
-
-        if (password === '') {
-            addError('Password is required.');
-            return false;
-        } else if (password.length < 8) {
-            addError('Password must be at least 8 characters long.');
-            return false;
-        } else if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}/.test(password)) {
-            addError('Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
-            return false;
-        }
-
-        if (confirmPassword === '') {
-            addError('Please confirm your password.');
-            return false;
-        } else if (password !== confirmPassword) {
-            addError('Passwords do not match.');
-            return false;
-        }
-
-        if (!agreeTerms) {
-            addError('You must agree to the terms of service and privacy policy.');
-            return false;
-        }
-
-        const captchaResponse = hcaptcha.getResponse();
-        if (captchaResponse.length === 0) {
-            addError('Please complete the captcha.');
-            return false;
-        }
-
-        return true;
+    if (password !== confirmPassword) {
+        errorMessages.classList.remove("d-none");
+        errorMessages.innerHTML = "Passwords do not match";
+        return;
     }
 
-    function addError(message) {
-        console.log(`Error: ${message}`);
-        errorMessages.classList.remove('d-none');
-        const errorElement = document.createElement('p');
-        errorElement.textContent = message;
-        errorMessages.appendChild(errorElement);
+    if (password.length < 8) {
+        errorMessages.classList.remove("d-none");
+        errorMessages.innerHTML = "Password must be at least 8 characters long";
+        return;
     }
 
-    function clearErrors() {
-        errorMessages.innerHTML = '';
-        errorMessages.classList.add('d-none');
+    if (!captchaResponse) {
+        errorMessages.classList.remove("d-none");
+        errorMessages.innerHTML = "Please complete the captcha";
+        return;
     }
 
-    function submitForm() {
-        const formData = new FormData(form);
-        console.log('Form submitted with the following data:');
-        for (let [key, value] of formData.entries()) {
-            console.log(`${key}: ${value}`);
-        }
+    const user = {
+        email: email,
+        username: username,
+        password: password
+    };
 
-        // Here you would send the data to your server
-        // For this example, we'll just show a success message
-        alert('Registration successful!');
-        
-        form.reset();
-        hcaptcha.reset();
-    }
+    localStorage.setItem(username, JSON.stringify(user));
+    alert("Registration successful! Please login.");
+    window.location.href = "login.html";
 });
