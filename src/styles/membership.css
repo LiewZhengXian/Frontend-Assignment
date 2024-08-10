@@ -1,3 +1,8 @@
+body {
+    padding-top: 60px; /* Adjust padding to match the height of your navbar */
+    background-color: #f0f2f5; /* Light background color for the body */
+}
+  
 .hero-section {
     background-image: url('../images/member1.jpg');
     background-size: cover;
@@ -154,6 +159,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+    body {
+        padding-top: 70px; /* Adjust this value based on the height of your navbar on larger screens */
+      }
     .membership-option {
         min-height: auto;
     }
@@ -219,3 +227,5 @@ footer {
     font-size: 1.2em;
     font-weight: bold;
 }
+
+
