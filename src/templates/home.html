@@ -12,7 +12,8 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">FitLife</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,8 +32,10 @@
         </div>
     </nav>
     
+
 <section>
-<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+    <!---Carousel Section-->
+<div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -45,7 +48,7 @@
                 <div class="container">
                     <h1>Transform Your Body, Transform Your Life</h1>
                     <p>Join FitLife today and start your journey to a healthier you!</p>
-                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="register.html" class="btn btn-primary btn-lg">Join Us</a>
                 </div>
                 
             </section>
@@ -55,10 +58,10 @@
             <section id="carousel1" class="hero" >
                 <div class="container">
 
-                    <h1>Our Team</h1>
+                    <h1>Membership Program</h1>
 
-                    <p>Join FitLife today and start your journey to a healthier you!</p>
-                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+                    <p>We have our own membership program to help keep you on track with your fitness journey !</p>
+                    <a href="membership.html" class="btn btn-primary btn-lg">Get membership</a>
                 </div>
                 
             </section>
@@ -66,9 +69,11 @@
           <div class="carousel-item">
             <section id="carousel2" class="hero">
                 <div class="container">
-                    <h1>Transform Your Body, Transform Your Life</h1>
-                    <p>Join FitLife today and start your journey to a healthier you!</p>
-                    <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+
+                    <h1>Helpful Info</h1>
+                    <p>FitLife is a one stop website to provide you latest health info</p>
+                    <a href="#features" class="btn btn-primary btn-lg">Get Started</a>
+
                 </div>
                 
             </section>
@@ -84,6 +89,79 @@
         </a>
       </div>
     </section>
+
+    <section id = "aboutus" class = py-5>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class = "aboutus-left h-100">
+                        <div class="chart-container h-100">
+                            <canvas id="obesityChart" ></canvas>
+                        </div>
+                        <!--
+                        <img src="../images/home-our-team.jpg" class ='img-fluid' width="600px" height = "400px" alt="">
+                    -->
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <div class="aboutus-right">
+                        
+                        <br>
+                        <h2>Why FitLife?</h2>
+                        <br>
+                        <ul>
+                            <li>Obesity rates have doubled in the last decade</li>
+                            <li>1 in 5 adults has diabetes</li>
+                            <li>Heart disease remains our #1 killer</li>
+                            <li>Stress and mental health issues are on the rise</li>
+                          </ul>
+                          <p class="hope-message">
+                            But there's hope. Small changes can lead to big results, and we're here to guide you every step of the way.
+                          </p>
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Team Section-->
+<section id = "mission" class = py-5>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class = "mission-left">
+                    <h2>What You'll Find Here:</h2>
+                    <br>
+
+                    <ul>
+                      <li>Expert advice from health professionals</li>
+                      <li>Easy-to-follow nutrition guides tailored to local cuisine</li>
+                      <li>Fun, effective workout plans for all fitness levels</li>
+                      <li>Find gym functionality to help you find gym near you</li>
+                      <li>Success stories from fellow Malaysians</li>
+                      <li>Community support and local health initiatives</li>
+                    </ul>
+                
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="mission-right">
+                    <img src="../images/home-our-team.jpg" class ='img-fluid'  width="600px" height = "400px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id = "testimonial">
+    <div class = "container">
+        <p>"This website is AWESOME. It has been my number one source for good fitness tips and advice"</p>
+        <p class="customer">- Chorng Huah</p>
+    </div>
+</section>
+
+
     <section id="features" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5">Our Features</h2>
@@ -168,8 +246,9 @@
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
-    </section>
 
+
+    </section>
     <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
@@ -238,8 +317,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../home.js"></script>
 </body>
 </html>

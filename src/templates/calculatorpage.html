@@ -10,7 +10,6 @@
 
 </head>
 
-<header>    
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
@@ -27,15 +26,12 @@
                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
     
             </ul>
-        </div>
-    </div>
-</nav>
-</header>
-<body>
 
+        </div>
+    </nav>
     <div class="container my-5">
         <h1 class="text-center mb-5">Health Calculators</h1>
-        <h3 class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque velit leo, aliquet ac ante sit amet, aliquam convallis felis. Nunc faucibus feugiat arcu eu placerat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed ante orci, dapibus eu volutpat id, consectetur non nulla. Pellentesque lorem ipsum, malesuada et turpis eu, posuere viverra nunc. Proin malesuada aliquam diam, a porttitor dui dapibus vitae. Pellentesque congue enim sed metus consectetur, vitae pharetra elit cursus. 
+        <h3 class="text-center mb-5">Take control of your health with our comprehensive set of calculators designed to help you track and optimize your fitness journey. Whether you're aiming to achieve your ideal body weight, manage your daily calorie intake, or balance your macronutrient ratio, our tools provide the insights you need. 
         </h3>
  
         <div class="accordion" id="calculatorsAccordion">
@@ -52,7 +48,7 @@
                         <div class="mb-3">
                             <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on BMI" data-bs-html="true"
                             data-bs-content="Body mass index (BMI) is a medical screening tool that measures the ratio of your height to your weight to estimate the amount of body fat you have. 
-                            <a href='https://www.news-medical.net/health/What-is-Body-Mass-Index-(BMI).aspx'>Click here for more info Link</a>">
+                            Click <a href='https://www.news-medical.net/health/What-is-Body-Mass-Index-(BMI).aspx' target=_blank>here</a> for more info.">
                             <i class="bi bi-info-circle"></i></button>
                         </div>
                         <form id="bmiForm">
@@ -76,7 +72,6 @@
                 <h2 class="accordion-header" id="calorieHeader">
                     
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#calorieCollapse" aria-expanded="false" aria-controls="calorieCollapse">
-
                           Calorie Calculator
                     </button>
                 </h2>
@@ -84,9 +79,9 @@
                 <div id="calorieCollapse" class="accordion-collapse collapse" aria-labelledby="calorieHeader" >
                     <div class="accordion-body">
                         <div class="mb-3">
-                            <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on BMI" data-bs-html="true"
-                            data-bs-content="Body mass index (BMI) is a medical screening tool that measures the ratio of your height to your weight to estimate the amount of body fat you have. 
-                            <a href='https://www.news-medical.net/health/What-is-Body-Mass-Index-(BMI).aspx'>Click here for more info Link</a>">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on Calorie Calculator" data-bs-html="true"
+                            data-bs-content="This Calorie Calculator is based on Revised Harris-Benedict equation, and the results of the calculator are based on an estimated average. 
+                            Click <a href='https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation'target=_blank>here</a> for more info">
                             <i class="bi bi-info-circle"></i></button>
                         </div>
                         <form id="calorieForm">
@@ -113,16 +108,78 @@
                             <div class="mb-3">
                                 <label for="activity" class="form-label">Activity Level</label>
                                 <select class="form-select" id="activity" required>
-                                    <option value="1.2">Sedentary</option>
-                                    <option value="1.375">Lightly Active</option>
-                                    <option value="1.55">Moderately Active</option>
-                                    <option value="1.725">Very Active</option>
-                                    <option value="1.9">Extra Active</option>
+                                    <option value="1.2">Sedentary: little to no exercise</option>
+                                    <option value="1.375">Lightly Active: exercise 1-3 times/week </option>
+                                    <option value="1.55">Moderately Active: exercise 4-5 times/week</option>
+                                    <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                                    <option value="1.9">Extra Active: very intense exercise daily or physical job</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Calculate Calories</button>
                         </form>
                         <div id="calorieResult" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="macroHeader">
+                    
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#macroCollapse" aria-expanded="false" aria-controls="macroCollapse">
+                          Macros Calculator
+                    </button>
+                </h2>
+
+                <div id="macroCollapse" class="accordion-collapse collapse" aria-labelledby="macroHeader" >
+                    <div class="accordion-body">
+                        <div class="mb-3">
+                            <button type="button" class="btn btn-lg btn-primary" data-bs-placement="left" data-bs-trigger="focus" data-bs-toggle="popover" title="Info on Macros Calculator" data-bs-html="true"
+                            data-bs-content="This Macros Calculator can provide a range of suggested values for a person's macronutrient (protein, fat, carbohydrates) and Calorie needs under normal conditions.
+                           ">
+                            <i class="bi bi-info-circle"></i></button>
+                        </div>
+                        <form id="macroForm">
+                            
+                            <div class="mb-3">
+                                <label for="age" class="form-label">Age (18-100)</label>
+                                <input type="number" class="form-control" id="macroAge" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="gender" class="form-label">Gender</label>
+                                <select class="form-select" id="macroGender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="macroHeight" class="form-label">Height (cm)</label>
+                                <input type="number" class="form-control" id="macroHeight" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="macroWeight" class="form-label">Weight (kg)</label>
+                                <input type="number" class="form-control" id="macroWeight" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="activity" class="form-label">Activity Level</label>
+                                <select class="form-select" id="macroActivity" required>
+                                    <option value="1.2">Sedentary: little to no exercise</option>
+                                    <option value="1.375">Lightly Active: exercise 1-3 times/week </option>
+                                    <option value="1.55">Moderately Active: exercise 4-5 times/week</option>
+                                    <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                                    <option value="1.9">Extra Active: very intense exercise daily or physical job</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="goal" class="form-label">Goal</label>
+                                <select class="form-select" id="macroGoal" required>
+                                    <option value="maintenance">Maintain Weight</option>
+                                    <option value="fat_loss">Fat Loss</option>
+                                    <option value="muscle_gain">Muscle Gain</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Calculate Macros</button>
+                            
+                        </form>
+                        <div id="macroResults" class="mt-3"></div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-const API_KEY = '';
+const API_KEY = 'sqj8xQXg9BYHTkXHI5KkCLGSNWdsyyHM';
 
 var map = L.map('map').setView([4.3336777,101.1337836], 50);
 if (!navigator.geolocation) {
@@ -22,8 +22,6 @@ locateMeButton.addEventListener('click', function() {
   if (!navigator.geolocation) {
     console.log("Your browser doesn't support geolocation feature!");
   } else {
-
-
     navigator.geolocation.getCurrentPosition(getPosition)
 
   }
@@ -52,6 +50,35 @@ function getPosition(position) {
   map.fitBounds(featureGroup.getBounds());
   document.getElementById('coordinates').innerHTML = 
   'Latitude: ' + lat.toFixed(6) + ', Longitude: ' + long.toFixed(6);
+
+  $.ajax({
+    url: `https://api.tomtom.com/search/2/poiSearch/gym.json`,
+    method: 'GET',
+    data: {
+      key: API_KEY,
+      lat: lat,
+      lon: long,
+      radius: 2000,
+      limit: 10
+    },
+    success: function(data) {
+      displayGyms(data.results);
+    },
+    error: function(jqXHR, textStatus, errorThrown) {
+      console.error('Error searching for gyms:', errorThrown);
+    }
+  });
+  
+  console.log(
+    "Your coordinate is: Lat: " +
+      lat +
+      " Long: " +
+      long +
+      " Accuracy: " +
+      accuracy
+  );
+  
+  /*
 fetch(`https://api.tomtom.com/search/2/poiSearch/gym.json?key=${API_KEY}&lat=${lat}&lon=${long}&radius=2000&limit=10`)
   .then(response => {
       if (!response.ok) {
@@ -75,8 +102,9 @@ fetch(`https://api.tomtom.com/search/2/poiSearch/gym.json?key=${API_KEY}&lat=${l
       long +
       " Accuracy: " +
       accuracy
-  );
+  );*/
 }
+
 
 map.on('click', function(e) {
   // Remove existing marker, if any
@@ -98,21 +126,23 @@ map.on('click', function(e) {
   // Update the coordinates display
   document.getElementById('coordinates').innerHTML = 
       'Latitude: ' + e.latlng.lat.toFixed(6) + ', Longitude: ' + e.latlng.lng.toFixed(6);
-  fetch(`https://api.tomtom.com/search/2/poiSearch/gym.json?key=${API_KEY}&lat=${e.latlng.lat}&lon=${e.latlng.lng}&radius=2000&limit=10`)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Failed to retrieve gyms');
-          }
-          return response.json();
-
-      })
-      .then(data => {
-
-
-        displayGyms(data.results);
-      })
-
-      .catch(error => console.error('Error searching for gyms:', error))
+      $.ajax({
+        url: 'https://api.tomtom.com/search/2/poiSearch/gym.json',
+        method: 'GET',
+        data: {
+          key: API_KEY,
+          lat: e.latlng.lat,
+          lon: e.latlng.lng,
+          radius: 2000,
+          limit: 10
+        },
+        success: function(data) {
+          displayGyms(data.results);
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error('Error searching for gyms:', errorThrown);
+        }
+      });
 
 });
 
@@ -130,7 +160,8 @@ function displayGyms(gyms) {
         ul.className = 'list-group';
 
         gyms.forEach(function(gym) {
-            const query = gym.poi.name.split(' ').join('+');
+            const query = `${gym.poi.name} ${gym.address.freeformAddress}`.split(' ').join('+');
+
             const li = document.createElement('li');
             li.className = 'list-group-item';
             li.innerHTML = `
