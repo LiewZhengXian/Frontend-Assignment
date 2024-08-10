@@ -6,6 +6,8 @@
     <title>Workout Tips</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href= "../styles/template.css">
+    <link rel="stylesheet" href= "../styles/food.css">
     <link rel="stylesheet" href="../styles/faqQues.css">
     <link rel="stylesheet" href="../styles/fatlosstips.css">
     <link rel="stylesheet" href="../styles/font.css">
@@ -21,13 +23,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
-              <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
                   Healthy Tips
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
-                  <a href="fatlosstips.html">Workout Tips</a>
+                  <a href="fatlosstips.html">Muscle Tips</a>
                   <a href="foodtips.html">Food Tips</a>
                 </div>
               </li>
@@ -63,14 +65,17 @@
             </ul>
           </div>
         </div>
-      </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div>
-            <h1>Tips for transform Your Life</h1>
-            <p>Join our community for fat loss and muscle gain tips</p>
-            <a href="#features" class="cta">Get Started</a>
+    </nav>
+    
+    <section class="hero">
+        <div class="row p-3 hero-content">
+            <div class="col-1 title">
+                <h2>Muscle Tips</h2>
+                <p>Enhance your strength and physique with our expert muscle training tips. Explore effective exercises and techniques tailored to target specific muscle groups, helping you build strength and achieve your fitness goals. Whether you're focusing on muscle gain or improving endurance, our insights will guide you through every rep and set, ensuring each workout contributes to your overall progress and well-being.</p>
+                 </div>
+            <div class="col-12 col-p-1 shadow lg p-3 mb-4 bg-white photo">
+                <img src="../images/burnfat.jpg" alt="Hero Image">
+            </div>
         </div>
     </section>
 
@@ -451,94 +456,107 @@
             </div>
         </div>
     </section>
-    
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container text-center">
-            <h2>Our Wisdom</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-lightning"></i></div>
-                    <h3>Effective Tips</h3>
-                    <p>Proven strategies to help you lose fat and gain muscle.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-graph-up"></i></div>
-                    <h3>Progress Tracking</h3>
-                    <p>Track your progress and stay motivated on your journey.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-heart"></i></div>
-                    <h3>Community Support</h3>
-                    <p>Join a community of like-minded individuals for support.</p>
-                </div>
+    
+    <section class="featured">
+      <h2>Featured</h2>
+      <div class="list-wrapper">
+        <button class="button button--previous" type="button">➜</button>
+        <ul class="list">
+          <li class="item">
+            <a href="https://www.planetfitness.com/">
+              <div class="content">
+                <img src="../images/planet.jpeg">
+                <p>Planet Fitness - Your reason to gym</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www2.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=19716&f2ndcontentid=34926">
+            <div class="content">
+              <img src="../images/utar.jpeg">
+              <p>Gymnasium for Utarian</p>
             </div>
-        </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://edition.cnn.com/2024/01/04/health/fitness-2024-resolutions-wellness/index.html">
+              <div class="content">
+                <img src="../images/cnn.png">
+                <p>Getting regular exercise in 2024</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.seniorlifestyle.com/resources/blog/7-best-exercises-for-seniors-and-a-few-to-avoid/">
+              <div class="content">
+                <img src="../images/senior.jpg">
+                <p>7 Best Exercises for Seniors (and a Few to Avoid!)</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.cracked.com/article_39441_5-fitness-scams-people-still-believe-are-true.html">
+              <div class="content">
+                <img src="../images/scam.jpg">
+                <p>5 Fitness Scams People Still Believe Are True</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="button button--next" type="button">➜</button>
+      </div>
     </section>
 
+     <section class="food-and-nutrition">
+      <div class="row align-items-center">
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo2">
+              <img src="../images/twopp.jpg" alt="Food and Nutrition" class="img-fluid">
+          </div>
+          <div class="col-md-6 description">
+              <div class="header-section">
+                  <h1>Partnership Exercise</h1>
+                  <a href="https://darebee.com/" class="view-more">View More</a>
+              </div>
+              <p class="description-text"><p>Discover the science of muscle training with our expert tips, exercises, and strength-building guides. Whether you're aiming to increase muscle mass, improve your strength, or enhance endurance, our content is designed to motivate and educate. Explore targeted workouts and techniques that can transform your fitness routine into a powerful tool for achieving your goals. From foundational exercises to advanced training methods, we've got you covered with comprehensive advice that caters to every fitness level and objective.</p>
+
+          </div>
+      </div>
+    </section>
+
+    <section class="recipes">
+      <div class="row align-items-center">
+          <div class="col-md-6 description">
+            <div class="header-section">
+              <h1>Trainer</h1>
+              <a href="https://www.skimble.com/" class="view-more">View more</a>
+            </div>
+            <p class="description-text">Embark on a transformative fitness journey with our expertly designed muscle training tips, crafted to enhance your strength and endurance. 
+                Each tip is thoughtfully created to maximize muscle engagement while ensuring proper form and technique. 
+                From foundational exercises that build strength to advanced routines that challenge your limits, our guidance is easy to follow 
+                and perfect for any fitness level. Whether you're looking to build muscle mass, increase strength, or fine-tune your physique, 
+                these tips will help you achieve your goals efficiently and effectively.
+            </p>
+
+          </div>
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo3">
+            <img src="../images/trainer.jpg" alt="Recipes" class="img-fluid">
+        </div>
+      </div>
+    </section>   
+
+    
     <section id="video-in-exercise-and-fitness" class="my-5">
         <div class="container text-center">
-            <div>
-                <h1 class="d-inline-block">Video In exercise-and-fitness</h1>
-            </div>
         
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe width="750" height="360" src="https://www.youtube.com/embed/rBUjOY12gJA" frameborder="0"
                 allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </section>  
 
-    <div id="carousel-section-wrapper">
-        <section id="carousel-section">
-            <h2>Marketplaces</h2>
-            <p>Click to direct to the marketplace</p>
-            <div class="carousel-container">
-                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="carousel-slide">
-                    <a href="https://nutrilitetraceability.com/" target="_blank">
-                        <img src="../images/cimage1.png" alt="Image 1">
-                    </a>
-                    <a href="https://shopee.com.my/" target="_blank">
-                        <img src="../images/cimage2.png" alt="Image 2">
-                    </a>
-                    <a href="https://www.lazada.com.my/" target="_blank">
-                        <img src="../images/cimage3.jpeg" alt="Image 3">
-                    </a>
-                    <a href="https://www.amazon.com/" target="_blank">
-                        <img src="../images/cimage4.jpeg" alt="Image 4">
-                    </a>
-                </div>
-                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
-               
-            </div>
-        </section>
-    </div>
     
-    <!-- Testimonials Section -->
-    <section class="testimonials bg-light">
-        <div class="container text-center">
-            <h2>What Others Say</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"I've never felt better! The tips are easy to follow and really work."</p>
-                    <p>- Alex</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"The community support keeps me motivated every day."</p>
-                    <p>- Jamie</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"I've seen incredible progress in just a few weeks."</p>
-                    <p>- Sam</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
@@ -563,6 +581,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../fatlosstips.js"></script>
+    <script src="../food.js"></script>
 
     <script>
         document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
