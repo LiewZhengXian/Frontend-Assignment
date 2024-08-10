@@ -5,39 +5,237 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href= "../styles/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href= "../styles/template.css">
+    <link rel="stylesheet" href= "../styles/food.css">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        
-                </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+          <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+              Healthy Tips
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+              <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+              <a href="foodtips.html">Food Tips</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+              <a href="aboutus.html">About Us</a>
+              <a href="ourteam.html">Our Team</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownTools">
+              <a href="calculatorpage.html">BMI Calculator</a>
+              <a href="findgym.html">Find Gym</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+              <i class="bi bi-person profile-icon"></i> Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a href="membership.html">JOIN US</a>
+              <a href="profile.html">SIGN IN</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <section class="hero">
+        <div class="row p-3 hero-content">
+            <div class="col-1 title">
+              <h2>Food</h2>
+              <p>Delve into the world of healthy eating with our curated content, designed to inspire and inform your journey to wellness. 
+                 Discover how balanced meals can nourish both your body and taste buds, offering options that suit every lifestyle and nutritional 
+                 need. Whether you're boosting energy or enhancing well-being, our insights make every meal a step toward better health.</p>
+            </div>
+            <div class="col-12 col-p-1 shadow lg p-3 mb-4 bg-white photo">
+                <img src="../images/healthyfood.jpg" alt="Hero Image">
             </div>
         </div>
-    </nav>
+    </section>
+    
+    <section class="featured">
+      <h2>Featured</h2>
+      <div class="list-wrapper">
+        <button class="button button--previous" type="button">➜</button>
+        <ul class="list">
+          <li class="item">
+            <a href="https://www.healthyfood.com/healthy-recipes/green-goodness-wellness-bowl/">
+              <div class="content">
+                <img src="https://www.healthyfood.com/wp-content/uploads/2024/06/HFG-IMAGES-600-x-450-px-27.png" alt="Liew Zheng Xian" class="img-fluid">
+                <p>Green goodness wellness bowl</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.heart.org/en/healthy-living/healthy-eating/add-color/5-reasons-to-eat-more-color"></a>
+            <div class="content">
+              <img src="https://www.heart.org/-/media/Healthy-Living-Images/Healthy-Eating/5_Reasons_to_Add_Color_360x430_infographic_thumbnail.jpg" alt="Liew Zheng Xian" class="img-fluid">
+              <p>5 Reasons to Eat More Color Infographic</p>
+            </div>
+          </li>
+          <li class="item">
+            <a href="https://www.healthyfoodfactory.eu/healthy-corner/detoxification-10-daily-rituals-body-cleanse-9174/">
+              <div class="content">
+                <img src="https://www.healthyfoodfactory.eu/upload/2016/01/thumb/organic-beauty-talk-green-detox-smoothie-cleanse_1230x630c.webp" alt="Liew Zheng Xian" class="img-fluid">
+                <p>Detoxification - 10 daily rituals for body cleanse</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.eatingwell.com/high-protein-vegetarian-dinner-recipes-for-diabetes-8684124">
+              <div class="content">
+                <img src="https://www.eatingwell.com/thmb/HGR_UdsiQ642ZK2Dav93xafkp0I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/White-Bean-Spinach-Lemon-Feta-Orzo-Skillet-beauty-318-765a78f3d54e4dc39b82011e2f742f73.jpg" alt="Liew Zheng Xian" class="img-fluid">
+                <p>15 High-Protein, Vegetarian Dinners for Better Blood Sugar</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.healthyfoodfactory.eu/healthy-corner/superfoods/these-are-undoubtedly-healthiest-nuts-68233/">
+              <div class="content">
+                <img src="https://www.healthyfoodfactory.eu/upload/publish/68233/thumb/oras-idi_6421870585784_1230x630c.webp" alt="Liew Zheng Xian" class="img-fluid">
+                <p>These are undoubtedly the healthiest nuts</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="button button--next" type="button">➜</button>
+      </div>
+    </section>
 
-    <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
-        <div class="container">
-            <p>&copy; 2024 FitLife. All rights reserved.</p>
+     <section class="food-and-nutrition">
+      <div class="row align-items-center">
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo2">
+              <img src="../images/foodandnutrition.jpg" alt="Food and Nutrition" class="img-fluid">
+          </div>
+          <div class="col-md-6 description">
+              <div class="header-section">
+                  <h1>Food and Nutrition</h1>
+                  <a href="../templates/foodandnutrition.html" class="view-more">View More</a>
+              </div>
+              <p class="description-text">Discover the art of healthy eating with our curated collection of recipes, tips, and nutritional guides. 
+                                          Whether you're looking to boost your energy, improve your overall health, or simply enjoy delicious meals, 
+                                          our content is designed to inspire and educate. Explore the balance of flavors and nutrients that can transform 
+                                          your daily meals into a feast for both the palate and the body. From hearty breakfasts to light snacks and indulgent dinners, 
+                                          we've got you covered with wholesome options that cater to every lifestyle and dietary need.</p>
+          </div>
+      </div>
+    </section>
+
+    <section class="recipes">
+      <div class="row align-items-center">
+          <div class="col-md-6 description">
+            <div class="header-section">
+              <h1>Recipes</h1>
+              <a href="../templates/recipe.html" class="view-more">View more</a>
+            </div>
+            <p class="description-text">Embark on a culinary journey with our healthy food recipes, crafted to nourish your body and delight your senses. 
+                                        Each recipe is thoughtfully designed to balance essential nutrients while keeping flavor at the forefront. 
+                                        From vibrant salads bursting with fresh vegetables to lean protein-packed dishes, our recipes are easy to prepare 
+                                        and perfect for any meal of the day. Whether you're looking to maintain a balanced diet, lose weight, or simply eat 
+                                        cleaner, these recipes will help you enjoy nutritious meals without sacrificing taste.
+
+            </p>
+          </div>
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo3">
+            <img src="../images/foodrecipe.jpg" alt="Recipes" class="img-fluid">
         </div>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      </div>
+    </section>   
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a
+            data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="https://www.facebook.com/utarconfessions2022/" target="_blank"
+              role="button"
+              ><i class="bi bi-facebook"></i
+            ></a>
+      
+            <!-- Google -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-google"></i
+            ></a>
+      
+            <!-- Instagram -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="#!"
+              role="button"
+              ><i class="bi bi-instagram"></i
+            ></a>
+      
+            <!-- Linkedin -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="https://www.linkedin.com/in/ler-jun-wei-875343306/" target="_blank"
+              role="button"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+            <!-- Github -->
+            <a
+              data-mdb-ripple-init
+              class="btn text-white btn-floating m-1"
+              style="background-color: #333333;"
+              href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank"
+              role="button"
+              ><i class="bi bi-github"></i>
+              </a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>&copy; 2024 FitLife. All rights reserved.</p>
+
+        </div>
+        <!-- Copyright -->
+      </footer>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../food.js"></script>
 </body>
