@@ -4,8 +4,15 @@ body {
     background-position: center;
     background-attachment: scroll;
     background-color: #aec7e0; /* Fallback color */
+    padding-top: 60px; /* Adjust padding to match the height of your navbar */
 }
 
+@media (min-width: 992px) {
+    body {
+      padding-top: 70px; /* Adjust this value based on the height of your navbar on larger screens */
+    }
+  }
+  
 .form-container {
     max-width: 350px;
     margin: auto;

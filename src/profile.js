@@ -1,44 +1,20 @@
-$(document).ready(function() {
-    // Function to get a cookie value
-    function getCookie(name) {
-        const value = `; ${document.cookie}`;
-        const parts = value.split(`; ${name}=`);
-        if (parts.length === 2) return parts.pop().split(';').shift();
-    }
+const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
+const userDetailsDiv = document.getElementById('userDetails');
 
-    // Function to delete a cookie
-    function deleteCookie(name) {
-        document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-    }
+if (currentUser) {
+    document.getElementById('welcomeMessage').innerHTML = `Hello <strong>${currentUser.username}</strong>, Welcome back!`;
+    userDetailsDiv.innerHTML = `
+        <p><strong>Username:</strong> ${currentUser.username}</p>
+        <p><strong>Email:</strong> ${currentUser.email}</p>
+    `;
+    document.getElementById('logoutButton').classList.remove('hidden');
+} else {
+    document.getElementById('welcomeMessage').innerHTML = `Hello, Please <a href='login.html'>Login</a> First!`;
+    userDetailsDiv.innerHTML = ''; // Clear user details if not logged in
+}
 
-    // Check if user is logged in
-    if (!getCookie('username')) {
-        window.location.href = 'login.html'; // Redirect to login if not logged in
-        return;
-    }
-
-    // Fetch user data
-    const username = getCookie('username');
-    const email = localStorage.getItem('tempEmail'); // Assuming email is stored in localStorage during registration
-
-    // Display user data
-    $('#profileUsername').text(username);
-    $('#profileEmail').text(email);
-
-    // Logout functionality
-    $('#logoutLink').click(function(e) {
-        e.preventDefault();
-        
-        // Clear cookies
-        deleteCookie('username');
-        deleteCookie('isLoggedIn');
-
-        // Redirect to login page
-        window.location.href = 'login.html';
-    });
-
-    // Edit Profile button (placeholder functionality)
-    $('#editProfileBtn').click(function() {
-        alert('Edit profile functionality to be implemented.');
-    });
+document.getElementById('logoutButton').addEventListener('click', function() {
+    sessionStorage.removeItem('currentUser');
+    document.cookie = 'rememberedUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    window.location.href = 'login.html';
 });
