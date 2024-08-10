@@ -65,3 +65,8 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.reload();
         });
 
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.querySelector('.flip-card-inner').classList.toggle('flipped');
+    });
+});
