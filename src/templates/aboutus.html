@@ -309,5 +309,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../home.js"></script>
     <script src="../aboutus.js"></script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"]').value;
+            if (!hCaptchaResponse) {
+                alert('Please complete the hCaptcha.');
+                return;
+            }
+
+            alert('Response received');
+            window.location.reload();
+        });
+    </script>
 </body>
 </html>
