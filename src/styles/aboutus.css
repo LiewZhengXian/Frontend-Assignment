@@ -290,3 +290,28 @@ header.masthead {
     transform: rotateY(180deg);
     overflow: auto; /* Allows scrolling for long content */
 }
+
+#contact-section {
+    background-color: #fff; /* Set the background to white */
+    color: #000; /* Set the text color to black */
+}
+
+#contact-section .form-control {
+    background-color: #fff; /* Input fields' background to white */
+    color: #000; /* Input fields' text to black */
+    border-color: #000; /* Input fields' border color to black */
+}
+
+#contact-section label {
+    color: #000; /* Labels' text to black */
+}
+
+#contact-section .btn-default {
+    background-color: #000; /* Set the button background to black */
+    color: #fff; /* Set the button text color to white */
+    border: 1px solid #000; /* Set button border to black */
+}
+
+#contact-section .form-check-label {
+    color: #000; /* Set the form check label to black */
+}
