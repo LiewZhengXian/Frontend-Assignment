@@ -52,3 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"]').value;
+            if (!hCaptchaResponse) {
+                alert('Please complete the hCaptcha.');
+                return;
+            }
+
+            alert('Response received');
+            window.location.reload();
+        });
+
