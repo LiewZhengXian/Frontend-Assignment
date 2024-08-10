@@ -8,67 +8,350 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/faqQues.css">
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/template.css">
+    
 </head>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife - Health Questionnaire</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../styles/home.css">
-</head>
-<body>
-
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            faqQNA
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="faqQues.html#research-and-information">Research and Information</a></li>
-                            <li><a class="dropdown-item" href="faqQues.html#video-in-exercise-and-fitness">Video In Exercise and Fitness</a></li>
-                            <li><a class="dropdown-item" href="faqQues.html#health-questionnaire">Health Questionnaire</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            aboutUs
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="aboutus.html#aboutus">about Us</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#product">product</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#vision">vision</a></li>
-                            <li><a class="dropdown-item" href="aboutus.html#contact-section">leave a message</a></li>
-                        </ul>
-                    </li>
-                </ul>
+          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+              <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+                  Healthy Tips
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+                  <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+                  <a href="foodtips.html">Food Tips</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+                  <a href="aboutus.html">About Us</a>
+                  <a href="ourteam.html">Our Team</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+                  Tools
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownTools">
+                  <a href="calculatorpage.html">BMI Calculator</a>
+                  <a href="findgym.html">Find Gym</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+                  <i class="bi bi-person profile-icon"></i> Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                  <a href="membership.html">JOIN US</a>
+                  <a href="profile.html">SIGN IN</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <!-- Empower Youth Section -->
+    <div id="empower-youth-section">
+        <video autoplay muted loop id="video-background">
+            <source src="../videos/brain.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <h1>FAQ The Frequency Ask Questions in health life</h1>
+            <p>We believe that every person deserves the chance to lead a healthy and fulfilling life. That's why we empower youth to make confident health choices through accessible, confidential health education and resources.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+
+        <section id="health-questionnaire" class="my-5">
+            <div>
+                <h1 class="d-inline-block">Health Questionnaire</h1>
+                <p class="text">Please answer all questions honestly</p>
+            </div>
+    
+            <div class="accordion" id="questionnaireAccordion">
+                <!-- Personal Details Section -->
+                <div class="accordion-item">
+                    <h1 align="text-center" >Personal details</h1>
+                    <div class="accordion-body">
+                        <form id="health-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="text" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">Date of Birth *</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="todays-date" class="form-label">Today's Date *</label>
+                                <input type="date" class="form-control" id="todays-date" name="todays-date" required>
+                            </div>
+
+                           <!-- Health Details Section -->
+                            <div class="accordion-item">
+                                <h1 class="text-center">Health Details</h1>
+                                <p class="text-center text-muted">Please answer the following questions to the best of your knowledge.</p>
+                                <div class="accordion-body">
+                                    <form id="health-details-form" class="needs-validation" novalidate>
+                                        <div class="row">
+                                            <!-- Question 1 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-heartbeat"></i> Heart Condition</h5>
+                                                        <p class="card-text">Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q1" id="q1-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q1-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q1" id="q1-no" value="no" required>
+                                                            <label class="form-check-label" for="q1-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 2 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-syringe"></i> Diabetes</h5>
+                                                        <p class="card-text">Have you ever been diagnosed with diabetes? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q2" id="q2-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q2-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q2" id="q2-no" value="no" required>
+                                                            <label class="form-check-label" for="q2-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 3 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-pills"></i> Prescription Medications</h5>
+                                                        <p class="card-text">Are you currently taking any prescription medications? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q3" id="q3-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q3-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q3" id="q3-no" value="no" required>
+                                                            <label class="form-check-label" for="q3-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 4 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Tobacco Use</h5>
+                                                        <p class="card-text">Do you smoke or use tobacco products? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q4" id="q4-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q4-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q4" id="q4-no" value="no" required>
+                                                            <label class="form-check-label" for="q4-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                             <!-- Question 5 -->
+                                             <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Surgery</h5>
+                                                        <p class="card-text">5. Have you ever had surgery? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q5" id="q5-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q5-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q5" id="q5-no" value="no" required>
+                                                            <label class="form-check-label" for="q5-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 6 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Pain or disease</h5>
+                                                        <p class="card-text">6. Do you experience any chronic pain or discomfort? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q6" id="q6-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q6-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q6" id="q6-no" value="no" required>
+                                                            <label class="form-check-label" for="q6-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 7 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Mental Health</h5>
+                                                        <p class="card-text">7. Have you ever been diagnosed with a mental health condition (e.g., depression, anxiety)? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q7" id="q7-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q7-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q7" id="q7-no" value="no" required>
+                                                            <label class="form-check-label" for="q7-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 8 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Alcohol Use</h5>
+                                                        <p class="card-text">8. Do you consume alcohol? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q8" id="q8-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q8-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q8" id="q8-no" value="no" required>
+                                                            <label class="form-check-label" for="q8-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 9 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Physical Disease </h5>
+                                                        <p class="card-text">9. Do you have a bone or joint problem that could be made worse by a change in your physical activity? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q9" id="q9-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q9-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q9" id="q9-no" value="no" required>
+                                                            <label class="form-check-label" for="q9-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Question 10 -->
+                                            <div class="col-md-6 mb-4">
+                                                <div class="card shadow-sm h-100">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title"><i class="fas fa-smoking"></i> Chest Health</h5>
+                                                        <p class="card-text">10. Do you feel pain in your chest when you do physical activity? *</p>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q10" id="q10-yes" value="yes" required>
+                                                            <label class="form-check-label" for="q10-yes">Yes</label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="q10" id="q10-no" value="no" required>
+                                                            <label class="form-check-label" for="q10-no">No</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        <!-- Signature -->
+                                        <div class="col-12 mb-4">
+                                            <div class="card shadow-sm h-100">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><i class="fas fa-signature"></i> Signature</h5>
+                                                    <div class="mb-3">
+                                                        <label for="signature" class="form-label">Signed: (typed full name and initials) *</label>
+                                                        <input type="text" class="form-control" id="signature" name="signature" required>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
+                                                        <label class="form-check-label" for="terms">I have read, understood, and completed this questionnaire. Any questions I had were answered to my full satisfaction.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Submit Button -->
+                                        <div class="col-12 text-center">
+                                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    <section id="video-in-exercise-and-fitness" class="my-5">
+        <div class="container text-center">
+            <div>
+                <h1 class="d-inline-block">Video In exercise-and-fitness</h1>
+            </div>
+        
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="750" height="360" src="https://www.youtube.com/embed/rBUjOY12gJA" frameborder="0"
+                allowfullscreen></iframe>
             </div>
         </div>
-    </nav>
+    </section>
 
     <section id="research-and-information" class="my-5">
 
         <div class="text-center">
-            <h1 class="border-title d-inline-block">Faq Questionaire</h1>
+            <h1 class="d-inline-block">Faq Questionaire</h1>
         </div>
 
         <div class="Research and Infomation">
-            <h1 class="border-title d-inline-block">Research and Infomation</h1>
+            <h1 class="d-inline-block">Research and Infomation</h1>
         </div>
 
         <div class="row">
@@ -102,203 +385,23 @@
             </div>
         </div>
     </section>
-    
-    
-    <div class="container my-5">
 
-        
-        <section id="video-in-exercise-and-fitness" class="my-5">
-            <div>
-                <h1 class="border-title d-inline-block">Video In exercise-and-fitness</h1>
+    <!-- Modal for Submission Notification -->
+    <div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="submissionModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="submissionModalLabel">Submission Complete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Thank you! Your submission has been received.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
-        
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="100%" height="360" src="https://www.youtube.com/embed/rBUjOY12gJA" frameborder="0"
-                allowfullscreen></iframe>
-            </div>
-        </section>
-
-        
-        <section id="health-questionnaire" class="my-5">
-            <div>
-                <h1 class="border-title d-inline-block">Health Questionnaire</h1>
-                <p class="text">Please answer all questions honestly</p>
-            </div>
-    
-            <div class="accordion" id="questionnaireAccordion">
-                <!-- Personal Details Section -->
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Personal Details
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#questionnaireAccordion">
-                        <div class="accordion-body">
-                            <form id="health-form">
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email address *</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="phone" class="form-label">Phone Number *</label>
-                                    <input type="text" class="form-control" id="phone" name="phone" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Full Name *</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="dob" class="form-label">Date of Birth *</label>
-                                    <input type="date" class="form-control" id="dob" name="dob" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="todays-date" class="form-label">Today's Date *</label>
-                                    <input type="date" class="form-control" id="todays-date" name="todays-date" required>
-                                </div>
-    
-                                <!-- Health Details Section -->
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Health Details
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#questionnaireAccordion">
-                                        <div class="accordion-body">
-                                            <form id="health-details-form">
-                                                <!-- Questions 1-10 -->
-                                                <div class="mb-3">
-                                                    <label>1. Has your doctor ever said that you have a heart condition and that you should only do physical activity recommended by a doctor? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q1" id="q1-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q1-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q1" id="q1-no" value="no" required>
-                                                        <label class="form-check-label" for="q1-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>2. Have you ever been diagnosed with diabetes? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q2" id="q2-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q2-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q2" id="q2-no" value="no" required>
-                                                        <label class="form-check-label" for="q2-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>3. Are you currently taking any prescription medications? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q3" id="q3-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q3-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q3" id="q3-no" value="no" required>
-                                                        <label class="form-check-label" for="q3-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>4. Do you smoke or use tobacco products? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q4" id="q4-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q4-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q4" id="q4-no" value="no" required>
-                                                        <label class="form-check-label" for="q4-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>5. Have you ever had surgery? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q5" id="q5-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q5-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q5" id="q5-no" value="no" required>
-                                                        <label class="form-check-label" for="q5-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>6. Do you experience any chronic pain or discomfort? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q6" id="q6-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q6-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q6" id="q6-no" value="no" required>
-                                                        <label class="form-check-label" for="q6-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>7. Have you ever been diagnosed with a mental health condition (e.g., depression, anxiety)? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q7" id="q7-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q7-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q7" id="q7-no" value="no" required>
-                                                        <label class="form-check-label" for="q7-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>8. Do you consume alcohol? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q8" id="q8-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q8-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q8" id="q8-no" value="no" required>
-                                                        <label class="form-check-label" for="q8-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>9. Do you have a bone or joint problem that could be made worse by a change in your physical activity? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q9" id="q9-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q9-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q9" id="q9-no" value="no" required>
-                                                        <label class="form-check-label" for="q9-no">No</label>
-                                                    </div>
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label>10. Do you feel pain in your chest when you do physical activity? *</label><br>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q10" id="q10-yes" value="yes" required>
-                                                        <label class="form-check-label" for="q10-yes">Yes</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="q10" id="q10-no" value="no" required>
-                                                        <label class="form-check-label" for="q10-no">No</label>
-                                                    </div>
-                                                </div>
-    
-                                                <div class="mb-3">
-                                                    <label for="signature" class="form-label">Signed: (typed full name and initials) *</label>
-                                                    <input type="text" class="form-control" id="signature" name="signature" required>
-                                                </div>
-                                                <div class="mb-3 form-check">
-                                                    <input type="checkbox" class="form-check-input" id="terms" name="terms" required>
-                                                    <label class="form-check-label" for="terms">I have read, understood, and completed this questionnaire. Any questions I had were answered to my full satisfaction.</label>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
+          </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">

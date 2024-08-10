@@ -74,3 +74,16 @@ footer {
     justify-content: center;
     margin-bottom: 1rem;
 }
+
+.form-control:focus {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.btn {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.alert {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}

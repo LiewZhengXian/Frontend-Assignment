@@ -40,3 +40,33 @@ app.post('/send-email', async (req, res) => {
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.js-scroll-trigger');
+    links.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+});
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"]').value;
+            if (!hCaptchaResponse) {
+                alert('Please complete the hCaptcha.');
+                return;
+            }
+
+            alert('Response received');
+            window.location.reload();
+        });
+
+document.querySelectorAll('.flip-card').forEach(card => {
+    card.addEventListener('click', () => {
+        card.querySelector('.flip-card-inner').classList.toggle('flipped');
+    });
+});

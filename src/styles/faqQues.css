@@ -1,5 +1,4 @@
 body {
-    background-image: url('../images/bcimg.jpg'); /* Update with the correct path to your background image */
     background-size: cover; /* Ensure the image covers the whole background */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-attachment: fixed; /* Keep the background fixed on scroll */
@@ -27,4 +26,60 @@ body {
     margin-bottom: 20px; /* Adjust the margin as needed */
 }
 
+.hero {
+    background: url('your-background-image-url.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
 
+
+/* Empower Youth Section */
+#empower-youth-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+#video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the video covers the entire area */
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Ensure the video is behind the content */
+}
+
+#empower-youth-section .content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    max-width: 1200px; /* Adjust max width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    color: black; /* Black color for text */
+}
+
+#empower-youth-section h1 {
+    font-family: 'Your Font', sans-serif; /* Replace with your actual font */
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-align: left; /* Align text to the left */
+}
+
+#empower-youth-section p {
+    font-family: 'Your Font', sans-serif; /* Replace with your actual font */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: right; /* Align text to the right */
+}
