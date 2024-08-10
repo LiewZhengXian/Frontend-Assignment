@@ -13,7 +13,27 @@ body {
     text-align: center;
     color:white;
 }
-
+#introduction .canvas{
+    width: 90%;
+    padding:50px 0 30px 0;
+    margin-top: 40px;
+}
+#testimonial{
+    background: #f1f1f1;
+    padding:50px 0 30px 0;
+    text-align:center;
+    margin-top: 40px;
+}
+#testimonial p{
+    font-size:32px;
+    font-family: 'Times New Roman';
+    color: #000;
+}
+#testimonial p.customer{
+    font-style: italic;
+    font-size: 24px;
+    color:#333;
+}
 #carousel0{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/carousel_img_1.jpg');
 }
@@ -45,4 +65,80 @@ body {
     background-color: #f8f9fa;
 }
 
+.aboutus-left, .aboutus-right {
+    height: 100%;
+}
 
+.chart-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.aboutus-right {
+    background-color: #f8f8f8;
+    border-left: 5px solid #e74c3c;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .aboutus-right h2 {
+    color: #2c3e50;
+    margin-top: 0;
+  }
+
+  .aboutus-right ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .aboutus-right li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+  }
+
+  .aboutus-right li:before {
+    content: "•";
+    color: #e74c3c;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+
+  .hope-message {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+
+    .mission-left{
+    background-color: #f8f8f8;
+    border-right: 5px solid #e74c3c;
+    padding: 20px;
+    margin: 20px 0;
+    }
+  .mission-left h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+
+  .mission-left ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .mission-left li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  .mission-left li:before {
+    content: "✓";
+    color: #27ae60;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
