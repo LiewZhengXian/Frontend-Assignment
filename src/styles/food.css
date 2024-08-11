@@ -6,16 +6,20 @@ body {
 }
 
 .hero {
-    display: flex;
-    align-items: center;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
     justify-content: center;
+    margin: auto;
+    height:100vh;
     padding: 2rem;
-    background-color: rgb(17, 144, 138);
+    background-image: linear-gradient(to right, rgb(17, 144, 138), white);
 }
 
 .hero-content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
@@ -33,11 +37,8 @@ body {
 }
 
 .title {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 20px;
+    padding: 20px;
+    text-align: left;
 }
 
 .title h2 {
@@ -45,7 +46,6 @@ body {
     font-weight: bolder;
     color: white;
     margin-bottom: 1rem;
-    text-align: left;
 }
 
 h2 span {
@@ -53,11 +53,20 @@ h2 span {
 }
 
 .title p {
-    font-size:large;
+    font-size: large;
     font-weight: 400;
     color: whitesmoke;
     margin-bottom: 1.5rem;
-    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .title h2 {
+        font-size: 2.5rem;
+    }
+
+    .title p {
+        font-size: medium;
+    }
 }
 
 .featured {
