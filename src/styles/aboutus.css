@@ -1,82 +1,107 @@
+/* Global Styles */
 body {
-    background-size: cover; /* Ensure the image covers the whole background */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Keep the background fixed on scroll */
-    background-position: center; /* Center the background image */
-}
-
-header.masthead {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Make the header height 100% of the viewport height */
-    overflow: hidden; /* Hide any overflow content */
-}
-@media (max-width: 768px) {
-    .header-text-box {
-        margin: 20px auto; /* Adjust margin */
-        padding: 10px; /* Adjust padding */
-        text-align: center; /* Center text */
-    }
-    
-    /* Ensure full width of elements */
-    .col-lg-10, .col-lg-8 {
-        width: 100%;
-    }
-
-    #video-background {
-        height: auto; /* Ensure the video scales properly */
-        width: 100vw;
-    }
-}
-#video-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensure the video covers the container */
-    object-position: center; /* Center the video in the container */
-}
-
-.text-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.text-box p1 {
-    font-size: 5em; /* Adjust the font size as needed */
-}
-
-.service-img {
-    width: 100%;
-    height: 200px; /* Adjust the height as needed */
-    object-fit: cover; /* Ensures the image covers the area without stretching */
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 .about-section {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.about-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+    text-align: left;
+}
+
+.about-photo {
+    flex: 1;
     text-align: center;
-    padding: 50px 20px;
 }
 
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.about-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
-.about-section p {
-    font-size: 16px;
-    color: #666;
+@media (max-width: 768px) {
+    .about-section .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 20px;
+        text-align: center; /* Center-align content on smaller screens */
+    }
+
+    .about-photo img {
+        width: 100%; /* Ensure image scales properly */
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .about-content h2 {
+        font-size: 2rem; /* Adjust font size for headings */
+        margin-bottom: 1rem;
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Adjust font size for paragraphs */
+        line-height: 1.4; /* Adjust line height for readability */
+        padding: 0 10px; /* Add padding for better spacing */
+    }
 }
 
-.timeline {
-    position: relative;
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.section-content {
     max-width: 800px;
     margin: 0 auto;
-    padding: 50px 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem; /* Adjust heading size */
+        margin-bottom: 20px;
+    }
+
+    .section-content {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.5; /* Adjust line height for readability */
+        padding: 0 15px; /* Add padding for better spacing */
+    }
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
 }
 
 .timeline::after {
@@ -91,9 +116,23 @@ header.masthead {
 }
 
 .timeline-item {
-    padding: 20px 40px;
+    padding: 20px;
     position: relative;
     width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: ' ';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -12.5px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
 }
 
 .timeline-item:nth-child(odd) {
@@ -104,58 +143,16 @@ header.masthead {
     left: 50%;
 }
 
-.timeline-img {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
-
-.timeline-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.timeline-img-text {
-    background-color: #ff9f55;
-    color: white;
-    font-size: 16px;
-    padding: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-}
-
 .timeline-content {
     padding: 20px;
     background: #f9f9f9;
     position: relative;
     border-radius: 6px;
-    margin-top: 20px;
-    z-index: 2;
 }
 
 .timeline-content h3 {
-    margin: 0;
-    font-size: 18px;
-    color: #ff9f55;
-}
-
-.timeline-content h4 {
-    margin: 10px 0;
-    font-size: 22px;
+    margin-top: 0;
+    color: #FF9F55;
 }
 
 .timeline-content p {
@@ -163,17 +160,15 @@ header.masthead {
     color: #666;
 }
 
-/* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-    .timeline {
-        padding: 30px 0;
+    .timeline::after {
+        left: 31px;
     }
 
     .timeline-item {
         width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-bottom: 40px;
+        padding-left: 70px;
+        padding-right: 25px;
     }
 
     .timeline-item:nth-child(odd),
@@ -181,153 +176,81 @@ header.masthead {
         left: 0;
     }
 
-    .timeline-img {
-        max-width: 150px;
-        height: 150px;
-    }
-
-    .timeline-content {
-        margin-top: 10px;
+    .timeline-item::after {
+        top: 15px;
+        left: 18px;
+        right: auto;
     }
 }
 
-
-/* Section Styles */
-#sliding-section {
-    background-color: #fff; /* Changed to white */
-    padding: 50px 0;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
+/* Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
 }
 
-#sliding-section h2 {
-    color: black; /* Changed to black */
+.contact-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
 }
 
-#sliding-section p {
-    color: black; /* Changed to black */
-    text-align: center;
-    margin: 10px 0;
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
 }
 
-.slider-wrapper {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.slider-line {
-    display: flex;
-    justify-content: space-between;
-    animation: slide-left 15s linear infinite;
-    width: calc(5 * 300px); /* Adjust based on image width */
-}
-
-.slider-line img {
-    width: 300px;
-    margin: 0 10px;
-    object-fit: cover;
-    height: 200px;
-}
-
-/* Reverse direction for the second row */
-.slider-line-reverse {
-    animation: slide-right 15s linear infinite;
-}
-
-@keyframes slide-left {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(calc(-100% + 100vw));
-    }
-}
-
-@keyframes slide-right {
-    from {
-        transform: translateX(calc(-100% + 100vw));
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-.slider-wrapper:hover .slider-line,
-.slider-wrapper:hover .slider-line-reverse {
-    animation-play-state: paused;
-}
-
-.flip-card {
-    background-color: transparent;
-    perspective: 1000px;
-    margin-bottom: 1rem;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+.contact-form button {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.flip-card-inner.flipped {
-    transform: rotateY(180deg);
-}
+@media (max-width: 768px) {
+    .contact-section h2 {
+        font-size: 1.8rem; /* Adjust heading size */
+        margin-bottom: 20px;
+    }
 
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-}
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
 
-.flip-card-front {
-    background-color: #fff;
-}
-
-.flip-card-back {
-    background-color: #f8f9fa;
-    color: black;
-    transform: rotateY(180deg);
-    overflow: auto; /* Allows scrolling for long content */
-}
-
-#contact-section {
-    background-color: #fff; /* Set the background to white */
-    color: #000; /* Set the text color to black */
-}
-
-#contact-section .form-control {
-    background-color: #fff; /* Input fields' background to white */
-    color: #000; /* Input fields' text to black */
-    border-color: #000; /* Input fields' border color to black */
-}
-
-#contact-section label {
-    color: #000; /* Labels' text to black */
-}
-
-#contact-section .btn-default {
-    background-color: #000; /* Set the button background to black */
-    color: #fff; /* Set the button text color to white */
-    border: 1px solid #000; /* Set button border to black */
-}
-
-#contact-section .form-check-label {
-    color: #000; /* Set the form check label to black */
+    .contact-form button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem; /* Adjust padding */
+    }
 }
