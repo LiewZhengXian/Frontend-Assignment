@@ -75,9 +75,11 @@
                         </div>
                     </div>
             </div>
-            <video autoplay muted loop id="video-background">
+            <video autoplay muted loop id="video-background" playsinline>
                 <source src="../videos/bgaboutus.mp4" type="video/mp4">
-            </video>
+                <!-- Fallback content -->
+                <img src="fall.jpg" alt="Background">
+            </video> 
         </header>
     </section>
     
