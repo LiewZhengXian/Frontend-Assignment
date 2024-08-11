@@ -1,4 +1,4 @@
-const API_KEY = '';
+const API_KEY = 'sqj8xQXg9BYHTkXHI5KkCLGSNWdsyyHM';
 
 var map = L.map('map').setView([4.3336777,101.1337836], 50);
 
