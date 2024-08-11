@@ -1,0 +1,247 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: rgb(17, 144, 138);
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.photo {
+    flex: 1;
+    text-align: right;
+    border-style: outset;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    border-color: rgb(219, 212, 212);
+}
+
+.title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.title h2 {
+    font-size: 4.5rem;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+h2 span {
+    color: #20aa76;
+}
+
+.title p {
+    font-size:large;
+    font-weight: 400;
+    color: whitesmoke;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.featured {
+    padding: 2rem 40px;
+    position: relative;
+    margin-top: 2rem;
+}
+
+.featured h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    text-align: left;
+    border-bottom: 2px solid lightgray;
+}
+
+.featured a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 768px) {
+    .item {
+        min-width: 150px;
+    }
+}
+
+.list-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1rem;
+    padding-left: 0;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    padding: 16px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
+    transition: transform 0.3s ease;
+}
+
+.list::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #FFF;
+    scroll-snap-align: center;
+}
+
+.button {
+    position: absolute;
+    font-size: 20px;
+    background-color: white;
+    color: black;
+    width: 45px;
+    height: 45px;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+  
+.button--previous {
+    left: 0;
+    transform: translateY(-50%) rotate(180deg);
+}
+  
+.button--next {
+    right: 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.content img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+}
+
+.content p {
+    margin-top: auto;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.food-and-nutrition, .recipes {
+    padding: 2rem;
+    align-items: center;
+}
+
+.food-and-nutrition .photo2 img, .recipes .photo3 img {
+    width: 800px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.photo2 .photo3 {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-right: 20px;
+    display: block;
+}
+
+.description {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items:end;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid lightgray;
+}
+
+.header-section h2 {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-section .view-more {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.header-section .view-more::after {
+    content: '→';
+    margin-left: 5px;
+    font-size: 1rem;
+}
+
+.description p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.description-text {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1rem;
+    text-align: justify;
+}

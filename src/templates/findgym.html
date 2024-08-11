@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href= "../styles/home.css">
-    
+    <link rel="stylesheet" href= "../styles/template.css">
     <!--Leaflet API for map--> 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -23,23 +23,58 @@
 <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/maps/maps-web.min.js"></script>
 <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.23.0/services/services-web.min.js"></script>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#contact">Contact</a></li>
-                    
-                </ul>
+<body style="margin-top: 100px;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
+    <div class="container header-container">
+      <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+          <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+              Healthy Tips
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+              <a href="fatlosstips.html">Workout Program</a>
+              <a href="foodtips.html">Food Tips</a>
             </div>
-        </div>
-    </nav>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+              About
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+              <a href="aboutus.html">About Us</a>
+              <a href="ourteam.html">Our Team</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownTools">
+              <a href="calculatorpage.html">BMI Calculator</a>
+              <a href="findgym.html">Find Gym</a>
+            </div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+              <i class="bi bi-person profile-icon"></i> Profile
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+              <a href="membership.html">JOIN US</a>
+              <a href="login.html">SIGN IN</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <div class="container my-5">
       <div class = "row">
       <h1 class="text-center mb-5">Find a gym near you 🦾 </h1>
@@ -63,6 +98,7 @@
         
           
         </div>
+
         <div id="info" class="p-3 rounded-2" style =  "background-color: var(--bs-light);">
           <b>Pin a coordinate by clicking on the map</b> or press the locate me button. <br><br>
           This will gather gyms in a 2km radius.
@@ -75,71 +111,71 @@
 
   </div>
   </div>
-    <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: Social media -->
-          <section class="mb-4">
-            <!-- Facebook -->
-            <a
-            data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #3b5998;"
-              href="https://www.facebook.com/utarconfessions2022/" target="_blank"
-              role="button"
-              ><i class="bi bi-facebook"></i
-            ></a>
-      
-            <!-- Google -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #dd4b39;"
-              href="#!"
-              role="button"
-              ><i class="bi bi-google"></i
-            ></a>
-      
-            <!-- Instagram -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #ac2bac;"
-              href="#!"
-              role="button"
-              ><i class="bi bi-instagram"></i
-            ></a>
-      
-            <!-- Linkedin -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #0082ca;"
-              href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank"
-              role="button"
-              ><i class="bi bi-linkedin"></i
-            ></a>
-            <!-- Github -->
-            <a
-              data-mdb-ripple-init
-              class="btn text-white btn-floating m-1"
-              style="background-color: #333333;"
-              href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank"
-              role="button"
-              ><i class="bi bi-github"></i>
-              </a>
-          </section>
-          <!-- Section: Social media -->
-        </div>
-        <!-- Grid container -->
-      
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
-            <p>&copy; 2024 FitLife. All rights reserved.</p>
+  <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+        data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #3b5998;"
+          href="https://www.facebook.com/utarconfessions2022/" target="_blank"
+          role="button"
+          ><i class="bi bi-facebook"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="#!"
+          role="button"
+          ><i class="bi bi-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="#!"
+          role="button"
+          ><i class="bi bi-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank"
+          role="button"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          data-mdb-ripple-init
+          class="btn text-white btn-floating m-1"
+          style="background-color: #333333;"
+          href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank"
+          role="button"
+          ><i class="bi bi-github"></i>
+          </a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        <p>&copy; 2024 FitLife. All rights reserved.</p>
 
-        </div>
-        <!-- Copyright -->
-      </footer>
+    </div>
+    <!-- Copyright -->
+  </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

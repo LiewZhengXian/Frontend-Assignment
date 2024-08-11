@@ -6,7 +6,7 @@
     <title>Our Team - FitLife</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-    <link rel="stylesheet" href= "../styles/home.css">
+    <link rel="stylesheet" href= "../styles/template.css">
     <link rel="stylesheet" href= "../styles/ourteam.css">
 
 </head>
@@ -14,22 +14,55 @@
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        
-                </ul>
-            </div>
+          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+              <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownHealthTips" role="button" aria-expanded="false">
+                  Healthy Tips
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+                  <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+                  <a href="foodtips.html">Food Tips</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+                  <a href="aboutus.html">About Us</a>
+                  <a href="ourteam.html">Our Team</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownTools" role="button" aria-expanded="false">
+                  Tools
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownTools">
+                  <a href="calculatorpage.html">BMI Calculator</a>
+                  <a href="findgym.html">Find Gym</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="membership.html">Membership</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+                  <i class="bi bi-person profile-icon"></i> Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                  <a href="register.html">JOIN US</a>
+                  <a href="profile.html">SIGN IN</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
 
     <!-- Our Team Content -->
     <div class="container my-5">
@@ -140,7 +173,7 @@
               data-mdb-ripple-init
               class="btn text-white btn-floating m-1"
               style="background-color: #0082ca;"
-              href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank"
+              href="https://www.linkedin.com/in/ler-jun-wei-875343306/" target="_blank"
               role="button"
               ><i class="bi bi-linkedin"></i
             ></a>

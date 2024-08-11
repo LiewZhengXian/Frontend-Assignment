@@ -11,6 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
         if (parsedUser.password === password) {
             // Set cookies
             document.cookie = `username=${username}; path=/;`;
+            document.cookie = `email=${parsedUser.email}; path=/;`;
             document.cookie = `isLoggedIn=true; path=/;`;
             
             // Optionally set a session cookie (could be useful)

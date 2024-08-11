@@ -1,52 +1,58 @@
-document.getElementById("password").addEventListener("blur", function () {
-    const password = document.getElementById("password").value;
-    const passwordFeedback = document.getElementById("passwordFeedback");
+$(document).ready(function() {
+    $('#password').on('blur', function() {
+        const password = $('#password').val();
+        const passwordFeedback = $('#passwordFeedback');
 
-    if (password.length < 8) {
-        passwordFeedback.textContent = "Password must be at least 8 characters long";
-    } else {
-        passwordFeedback.textContent = "";
-    }
-});
+        if (password.length < 8) {
+            passwordFeedback.text("Password must be at least 8 characters long");
+        } else {
+            passwordFeedback.text("");
+        }
+    });
 
-document.getElementById("registerForm").addEventListener("submit", function (event) {
-    event.preventDefault();
+    $('#registerForm').on('submit', function(event) {
+        event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
-    const captchaResponse = hcaptcha.getResponse();
+        const email = $('#email').val();
+        const username = $('#username').val();
+        const password = $('#password').val();
+        const confirmPassword = $('#confirmPassword').val();
+        const captchaResponse = hcaptcha.getResponse();  // Get the captcha response
 
-    const errorMessages = document.getElementById("errorMessages");
-    errorMessages.classList.add("d-none");
-    errorMessages.innerHTML = "";
+        const errorMessages = $('#errorMessages');
+        errorMessages.addClass('d-none');
+        errorMessages.html('');
 
-    if (password !== confirmPassword) {
-        errorMessages.classList.remove("d-none");
-        errorMessages.innerHTML = "Passwords do not match";
-        return;
-    }
+        // Validate form inputs
+        if (password !== confirmPassword) {
+            errorMessages.removeClass('d-none');
+            errorMessages.html("Passwords do not match");
+            return;
+        }
 
-    if (password.length < 8) {
-        errorMessages.classList.remove("d-none");
-        errorMessages.innerHTML = "Password must be at least 8 characters long";
-        return;
-    }
+        if (password.length < 8) {
+            errorMessages.removeClass('d-none');
+            errorMessages.html("Password must be at least 8 characters long");
+            return;
+        }
 
-    if (!captchaResponse) {
-        errorMessages.classList.remove("d-none");
-        errorMessages.innerHTML = "Please complete the captcha";
-        return;
-    }
+        if (!captchaResponse) {
+            errorMessages.removeClass('d-none');
+            errorMessages.html("Please complete the captcha");
+            return;
+        }
 
-    const user = {
-        email: email,
-        username: username,
-        password: password
-    };
+        const user = {
+            email: email,
+            username: username,
+            password: password
+        };
 
-    localStorage.setItem(username, JSON.stringify(user));
-    alert("Registration successful! Please login.");
-    window.location.href = "login.html";
+        // Store the user information in localStorage
+        localStorage.setItem(username, JSON.stringify(user));
+
+        // Confirmation and redirection
+        alert("Registration successful! Please login.");
+        window.location.href = "login.html";  // Redirect to the login page
+    });
 });

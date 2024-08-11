@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLife Membership</title>
+    <title>Workout Tips</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href= "../styles/template.css">
+    <link rel="stylesheet" href= "../styles/food.css">
     <link rel="stylesheet" href="../styles/faqQues.css">
     <link rel="stylesheet" href="../styles/fatlosstips.css">
-    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/font.css">
     <link rel="stylesheet" href="../styles/template.css">
     
 </head>
@@ -27,7 +29,7 @@
                   Healthy Tips
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
-                  <a href="fatlosstips.html">Fat Loss & Muscle Train</a>
+                  <a href="fatlosstips.html">Muscle Tips</a>
                   <a href="foodtips.html">Food Tips</a>
                 </div>
               </li>
@@ -56,339 +58,505 @@
                   <i class="bi bi-person profile-icon"></i> Profile
                 </a>
                 <div class="dropdown-menu" aria-labelledby="dropdownProfile">
-                  <a href="membership.html">JOIN US</a>
+                  <a href="register.html">JOIN US</a>
                   <a href="profile.html">SIGN IN</a>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-      </nav>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div>
-            <h1>Tips for transform Your Life</h1>
-            <p>Join our community for fat loss and muscle gain tips</p>
-            <a href="#features" class="cta">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <div class="container text-center">
-            <h2>Our Wisdom</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-lightning"></i></div>
-                    <h3>Effective Tips</h3>
-                    <p>Proven strategies to help you lose fat and gain muscle.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-graph-up"></i></div>
-                    <h3>Progress Tracking</h3>
-                    <p>Track your progress and stay motivated on your journey.</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-heart"></i></div>
-                    <h3>Community Support</h3>
-                    <p>Join a community of like-minded individuals for support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div id="carousel-section-wrapper">
-        <section id="carousel-section">
-            <h2>Marketplaces</h2>
-            <p>Click to direct to the marketplace</p>
-            <div class="carousel-container">
-                <button class="carousel-button prev" onclick="changeSlide(-1)">&#10094;</button>
-                <div class="carousel-slide">
-                    <a href="https://nutrilitetraceability.com/" target="_blank">
-                        <img src="../images/cimage1.png" alt="Image 1">
-                    </a>
-                    <a href="https://shopee.com.my/" target="_blank">
-                        <img src="../images/cimage2.png" alt="Image 2">
-                    </a>
-                    <a href="https://www.lazada.com.my/" target="_blank">
-                        <img src="../images/cimage3.jpeg" alt="Image 3">
-                    </a>
-                    <a href="https://www.amazon.com/" target="_blank">
-                        <img src="../images/cimage4.jpeg" alt="Image 4">
-                    </a>
-                </div>
-                <button class="carousel-button next" onclick="changeSlide(1)">&#10095;</button>
-               
-            </div>
-        </section>
-    </div>
+    </nav>
     
-    <section id="product" class="my-5">
-        <div class="text-center">
-            <h1 class="d-inline-block">Hot Sales Product</h1>
+    <section class="hero">
+        <div class="row p-3 hero-content">
+            <div class="col-1 title">
+                <h2>Muscle Tips</h2>
+                <p>Enhance your strength and physique with our expert muscle training tips. Explore effective exercises and techniques tailored to target specific muscle groups, helping you build strength and achieve your fitness goals. Whether you're focusing on muscle gain or improving endurance, our insights will guide you through every rep and set, ensuring each workout contributes to your overall progress and well-being.</p>
+                 </div>
+            <div class="col-12 col-p-1 shadow lg p-3 mb-4 bg-white photo">
+                <img src="../images/burnfat.jpg" alt="Hero Image">
+            </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="hot-sales-flip-card-container">
-                    <div class="hot-sales-flip-card">
-                        <div class="hot-sales-flip-card-inner">
-                            <div class="hot-sales-flip-card-front">
-                                <img src="../images/personal-training.jpg" alt="Personal Training" class="img-fluid service-img">
-                                <h3>Personal Training</h3>
-                            </div>
-                            <div class="hot-sales-flip-card-back">
-                                <p>Get personalized training programs tailored to your needs.</p>
-                            </div>
-                        </div>
+    </section>
+
+    <section id="muscle-training-tips" class="flip-cards">
+        <div class="container">
+            <div class="row">
+                <!-- Filter Section -->
+                <div class="col-md-3">
+                    <h3>Muscle Focus</h3>
+                    <div>
+                        <input type="checkbox" id="filter-legs" class="filter-checkbox" value="legs">
+                        <label for="filter-legs">Legs</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-chest" class="filter-checkbox" value="chest">
+                        <label for="filter-chest">Chest</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-back" class="filter-checkbox" value="back">
+                        <label for="filter-back">Back</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="filter-shoulders" class="filter-checkbox" value="shoulders">
+                        <label for="filter-shoulders">Shoulders</label>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="hot-sales-flip-card-container">
-                    <div class="hot-sales-flip-card">
-                        <div class="hot-sales-flip-card-inner">
-                            <div class="hot-sales-flip-card-front">
-                                <img src="../images/group-classes.jpg" alt="Group Classes" class="img-fluid service-img">
-                                <h3>Group Classes</h3>
-                            </div>
-                            <div class="hot-sales-flip-card-back">
-                                <p>Join our group classes and enjoy a variety of fitness activities.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="hot-sales-flip-card-container">
-                    <div class="hot-sales-flip-card">
-                        <div class="hot-sales-flip-card-inner">
-                            <div class="hot-sales-flip-card-front">
-                                <img src="../images/nutrition-plans.jpg" alt="Nutrition Plans" class="img-fluid service-img">
-                                <h3>Nutrition Plans</h3>
-                            </div>
-                            <div class="hot-sales-flip-card-back">
-                                <p>Receive expert nutrition advice and meal plans for a healthier lifestyle.</p>
+    
+                <!-- Flip Cards Section -->
+                <div class="col-md-9">
+                    <div class="row" id="tips-container">
+                        <div class="col-md-4 mb-4 flip-card" data-category="legs">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Squats</h3>
+                                        <p>Effective for overall leg strength.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 43 Minutes</p>
+                                        <p>Body Focus: Legs</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: None</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="col-md-4 mb-4 flip-card" data-category="legs">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Lunges</h3>
+                                        <p>Targets quadriceps and glutes.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 35 Minutes</p>
+                                        <p>Body Focus: Legs</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Dumbbells</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat similar blocks for more tips with appropriate data-category -->
+                        <div class="col-md-4 mb-4 flip-card" data-category="chest">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Push-ups</h3>
+                                        <p>Targets chest and triceps.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 30 Minutes</p>
+                                        <p>Body Focus: Chest</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: None</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Legs -->
+                        <div class="col-md-4 mb-4 flip-card" data-category="legs">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Leg Press</h3>
+                                        <p>Builds strength in the quadriceps and hamstrings.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 40 Minutes</p>
+                                        <p>Body Focus: Legs</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Leg Press Machine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="legs">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Leg Curl</h3>
+                                        <p>Isolates and strengthens the hamstrings.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥</p>
+                                        <p>Daily Duration: Avg. 30 Minutes</p>
+                                        <p>Body Focus: Legs</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Leg Curl Machine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="legs">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Leg Extensions</h3>
+                                        <p>Targets the quadriceps for defined muscles.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥</p>
+                                        <p>Daily Duration: Avg. 25 Minutes</p>
+                                        <p>Body Focus: Legs</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Leg Extension Machine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chest -->
+                        <div class="col-md-4 mb-4 flip-card" data-category="chest">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Bench Press</h3>
+                                        <p>Essential for building chest and triceps strength.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 45 Minutes</p>
+                                        <p>Body Focus: Chest</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="chest">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Incline Bench Press</h3>
+                                        <p>Focuses on the upper chest muscles.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 40 Minutes</p>
+                                        <p>Body Focus: Chest</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="chest">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Chest Fly</h3>
+                                        <p>Isolates the chest muscles for better definition.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 35 Minutes</p>
+                                        <p>Body Focus: Chest</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Dumbbells</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Back -->
+                        <div class="col-md-4 mb-4 flip-card" data-category="back">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Deadlift</h3>
+                                        <p>The king of all back exercises for strength.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 50 Minutes</p>
+                                        <p>Body Focus: Back</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="back">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Lat Pulldown</h3>
+                                        <p>Targets the lats for a wider back.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 35 Minutes</p>
+                                        <p>Body Focus: Back</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Pulldown Machine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="back">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Barbell Row</h3>
+                                        <p>Builds strength in the middle back.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 40 Minutes</p>
+                                        <p>Body Focus: Back</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="back">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Pull-Ups</h3>
+                                        <p>Classic exercise for back width and strength.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 30 Minutes</p>
+                                        <p>Body Focus: Back</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: None</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="back">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Seated Row</h3>
+                                        <p>Strengthens the middle back muscles.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 35 Minutes</p>
+                                        <p>Body Focus: Back</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Row Machine</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shoulders -->
+                        <div class="col-md-4 mb-4 flip-card" data-category="shoulders">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Overhead Press</h3>
+                                        <p>Essential for shoulder strength and size.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 40 Minutes</p>
+                                        <p>Body Focus: Shoulders</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="shoulders">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Lateral Raises</h3>
+                                        <p>Targets the side delts for broader shoulders.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥</p>
+                                        <p>Daily Duration: Avg. 30 Minutes</p>
+                                        <p>Body Focus: Shoulders</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Dumbbells</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="shoulders">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Front Raises</h3>
+                                        <p>Focuses on the front delts for defined shoulders.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥</p>
+                                        <p>Daily Duration: Avg. 30 Minutes</p>
+                                        <p>Body Focus: Shoulders</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Dumbbells</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="shoulders">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Arnold Press</h3>
+                                        <p>Combines pressing and rotation for full shoulder activation.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 40 Minutes</p>
+                                        <p>Body Focus: Shoulders</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Dumbbells</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-4 flip-card" data-category="shoulders">
+                            <div class="hot-sales-flip-card">
+                                <div class="hot-sales-flip-card-inner">
+                                    <div class="hot-sales-flip-card-front">
+                                        <h3>Upright Row</h3>
+                                        <p>Targets the traps and side delts.</p>
+                                    </div>
+                                    <div class="hot-sales-flip-card-back">
+                                        <p>Difficulty: 🔥🔥🔥</p>
+                                        <p>Daily Duration: Avg. 35 Minutes</p>
+                                        <p>Body Focus: Shoulders</p>
+                                        <p>Training Type: Strength Training</p>
+                                        <p>Equipment: Barbell</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more cards here -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    
+    <section class="featured">
+      <h2>Featured</h2>
+      <div class="list-wrapper">
+        <button class="button button--previous" type="button">➜</button>
+        <ul class="list">
+          <li class="item">
+            <a href="https://www.planetfitness.com/">
+              <div class="content">
+                <img src="../images/planet.jpeg">
+                <p>Planet Fitness - Your reason to gym</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www2.utar.edu.my/dsa-pk/index.jsp?fcatid=411&fcontentid=19716&f2ndcontentid=34926">
+            <div class="content">
+              <img src="../images/utar.jpeg">
+              <p>Gymnasium for Utarian</p>
+            </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://edition.cnn.com/2024/01/04/health/fitness-2024-resolutions-wellness/index.html">
+              <div class="content">
+                <img src="../images/cnn.png">
+                <p>Getting regular exercise in 2024</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.seniorlifestyle.com/resources/blog/7-best-exercises-for-seniors-and-a-few-to-avoid/">
+              <div class="content">
+                <img src="../images/senior.jpg">
+                <p>7 Best Exercises for Seniors (and a Few to Avoid!)</p>
+              </div>
+            </a>
+          </li>
+          <li class="item">
+            <a href="https://www.cracked.com/article_39441_5-fitness-scams-people-still-believe-are-true.html">
+              <div class="content">
+                <img src="../images/scam.jpg">
+                <p>5 Fitness Scams People Still Believe Are True</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <button class="button button--next" type="button">➜</button>
+      </div>
+    </section>
+
+     <section class="food-and-nutrition">
+      <div class="row align-items-center">
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo2">
+              <img src="../images/twopp.jpg" alt="Food and Nutrition" class="img-fluid">
+          </div>
+          <div class="col-md-6 description">
+              <div class="header-section">
+                  <h1>Partnership Exercise</h1>
+                  <a href="https://darebee.com/" class="view-more">View More</a>
+              </div>
+              <p class="description-text"><p>Discover the science of muscle training with our expert tips, exercises, and strength-building guides. Whether you're aiming to increase muscle mass, improve your strength, or enhance endurance, our content is designed to motivate and educate. Explore targeted workouts and techniques that can transform your fitness routine into a powerful tool for achieving your goals. From foundational exercises to advanced training methods, we've got you covered with comprehensive advice that caters to every fitness level and objective.</p>
+
+          </div>
+      </div>
+    </section>
+
+    <section class="recipes">
+      <div class="row align-items-center">
+          <div class="col-md-6 description">
+            <div class="header-section">
+              <h1>Trainer</h1>
+              <a href="https://www.skimble.com/" class="view-more">View more</a>
+            </div>
+            <p class="description-text">Embark on a transformative fitness journey with our expertly designed muscle training tips, crafted to enhance your strength and endurance. 
+                Each tip is thoughtfully created to maximize muscle engagement while ensuring proper form and technique. 
+                From foundational exercises that build strength to advanced routines that challenge your limits, our guidance is easy to follow 
+                and perfect for any fitness level. Whether you're looking to build muscle mass, increase strength, or fine-tune your physique, 
+                these tips will help you achieve your goals efficiently and effectively.
+            </p>
+
+          </div>
+          <div class="col-md-6 shadow lg p-3 mb-4 bg-white photo3">
+            <img src="../images/trainer.jpg" alt="Recipes" class="img-fluid">
+        </div>
+      </div>
+    </section>   
+
+    
     <section id="video-in-exercise-and-fitness" class="my-5">
         <div class="container text-center">
-            <div>
-                <h1 class="d-inline-block">Video In exercise-and-fitness</h1>
-            </div>
         
             <div class="embed-responsive embed-responsive-16by9">
                 <iframe width="750" height="360" src="https://www.youtube.com/embed/rBUjOY12gJA" frameborder="0"
                 allowfullscreen></iframe>
             </div>
         </div>
-    </section>
+    </section>  
 
-    <!-- Flip Cards Section -->
-    <section class="flip-cards" id="flip-cards">
-        <div class="container text-center">
-            <h2>Discover More FatLoss & MuscleGain Tips</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🔥</span>
-                                <h3>Card 1</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: What is the best diet for fat loss? <br>A: A balanced diet with a calorie deficit, rich in lean proteins, vegetables, and whole grains.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">💪</span>
-                                <h3>Card 2</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: How often should I work out to gain muscle? <br>A: Aim for strength training 3-4 times per week.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🍎</span>
-                                <h3>Card 3</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: Can I lose fat and gain muscle at the same time? <br>A: Yes, with proper nutrition and exercise, it's possible to achieve both.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🚀</span>
-                                <h3>Card 4</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: What is a good post-workout meal for muscle gain? <br>A: A mix of protein and carbohydrates, like chicken with brown rice.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🌟</span>
-                                <h3>Card 5</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: How much protein do I need daily for muscle growth? <br>A: About 1.6-2.2 grams of protein per kilogram of body weight.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">⚡</span>
-                                <h3>Card 6</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: Is cardio necessary for fat loss? <br>A: Cardio helps burn calories, but strength training also boosts metabolism and aids fat loss.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🔥</span>
-                                <h3>Card 7</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: What is the role of sleep in muscle gain and fat loss? <br>A: Quality sleep is crucial for recovery, muscle growth, and hormonal balance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">💪</span>
-                                <h3>Card 8</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: How can I stay motivated on my fitness journey? <br>A: Set realistic goals, track progress, and find a workout routine you enjoy.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <span class="emoji">🍎</span>
-                                <h3>Card 9</h3>
-                            </div>
-                            <div class="flip-card-back">
-                                <p>Q: What are effective exercises for muscle gain? <br>A: Compound exercises like squats, deadlifts, and bench presses are highly effective.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <h2 class="text-center">Most popular questions</h2>
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is the best diet for fat loss?
-                        </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            A balanced diet with a calorie deficit, rich in lean proteins, vegetables, and whole grains.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            How often should I work out to gain muscle?
-                        </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            Aim for strength training 3-4 times per week.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Can I lose fat and gain muscle at the same time?
-                        </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                            Yes, with proper nutrition and exercise, it's possible to achieve both.
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more FAQ items here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials bg-light">
-        <div class="container text-center">
-            <h2>What Others Say</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"I've never felt better! The tips are easy to follow and really work."</p>
-                    <p>- Alex</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"The community support keeps me motivated every day."</p>
-                    <p>- Jamie</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="icon"><i class="bi bi-person-circle"></i></div>
-                    <p>"I've seen incredible progress in just a few weeks."</p>
-                    <p>- Sam</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3">
@@ -409,11 +577,28 @@
     <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
 
     <script src="../jquery-3.7.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../fatlosstips.js"></script>
+    <script src="../food.js"></script>
+
+    <script>
+        document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', () => {
+                const selectedCategories = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
+                    .map(cb => cb.value);
+
+                document.querySelectorAll('.flip-card').forEach(card => {
+                    if (selectedCategories.length === 0 || selectedCategories.includes(card.dataset.category)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
     
 </body>
 </html>

@@ -1,40 +1,86 @@
-body {
-    background-image: url('../images/join-background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: scroll;
-    background-color: #aec7e0; /* Fallback color */
-}
-
-.profile-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.profile-info {
-    margin-top: 20px;
-}
-
-.profile-info p {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
-}
-
-footer {
-    margin-top: 2rem;
-}
+html, body {
+    height: 100%; /* Ensure body takes full height */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    padding-top: 60px; /* Adjust padding to match the height of your navbar */
+    background-color: #f0f2f5; /* Light background color for the body */
+  }
+  
+  @media (min-width: 992px) {
+    body {
+      padding-top: 70px; /* Adjust this value based on the height of your navbar on larger screens */
+    }
+  }
+  
+  
+  .profile-container {
+    max-width: 1000px; /* Increased max-width for larger container */
+    margin: 60px auto; /* Increased margin for more spacing */
+    padding: 30px; /* Increased padding for more space inside container */
+    display: flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: .375rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2); /* Slightly increased shadow */
+    background-color: #ffffff; /* White background for the profile container */
+  }
+  
+  .profile-picture {
+    font-size: 120px; /* Increased font size for the profile icon */
+    color: #6c757d;
+    margin-right: 30px; /* Increased margin for more space */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    width: 140px; /* Increased width */
+    height: 140px; /* Increased height */
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h1 {
+    font-size: 2rem; /* Increased font size for h1 */
+    margin-bottom: 25px; /* Increased margin-bottom for more space */
+    color: #212529; /* Dark text color */
+  }
+  
+  .profile-info h1 a {
+    font-weight: bold; /* Bold the link text */
+    color: #007bff; /* Bootstrap primary color */
+  }
+  
+  .profile-details {
+    margin-top: 25px; /* Increased margin-top for more spacing */
+  }
+  
+  .profile-details p {
+    font-size: 1.25rem; /* Increased font size for paragraph text */
+    margin-bottom: 15px; /* Increased margin-bottom for more spacing */
+    color: #495057; /* Darker text color for details */
+  }
+  
+  .profile-details strong {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  footer {
+    margin-top: 3rem; /* Increased margin-top for more spacing from content */
+  }
+  
+  .content {
+    flex: 1; /* Take up remaining space */
+  }
+  
