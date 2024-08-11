@@ -20,6 +20,82 @@ body {
     width: 100%;
 }
 
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+    }
+
+    .title {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .title h2 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+        text-align: center;
+    }
+
+    .title p {
+        font-size: 1rem; /* Adjust font size for readability */
+        text-align: center;
+    }
+
+    .photo {
+        margin-top: 20px;
+        text-align: center;
+        border-style: none; /* Remove border styling on mobile if not needed */
+    }
+
+    .photo img {
+        width: 100%; /* Ensure image scales properly */
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured h2, .header-section h2 {
+        font-size: 1.8rem; /* Adjust heading sizes */
+    }
+
+    .featured {
+        padding: 1rem 20px; /* Reduce padding */
+    }
+
+    .list-wrapper {
+        padding-left: 10px;
+    }
+
+    .list {
+        gap: 10px; /* Reduce gap between items */
+        padding: 10px;
+    }
+
+    .item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .food-and-nutrition .photo2 img, .recipes .photo3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .description {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .description p, .description-text {
+        font-size: 0.9rem;
+    }
+}
+
 .photo {
     flex: 1;
     text-align: right;
