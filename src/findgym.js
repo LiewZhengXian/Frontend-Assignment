@@ -1,14 +1,7 @@
 const API_KEY = 'sqj8xQXg9BYHTkXHI5KkCLGSNWdsyyHM';
 
 var map = L.map('map').setView([4.3336777,101.1337836], 50);
-if (!navigator.geolocation) {
-    console.log("Your browser doesn't support geolocation feature!");
-  } else {
 
-
-    navigator.geolocation.getCurrentPosition(getPosition)
-
-  }
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -19,12 +12,15 @@ var marker, circle, lat, long, accuracy;
 var gymMarkers = [];
 var locateMeButton = document.getElementById('locateMeButton');
 locateMeButton.addEventListener('click', function() {
+  const loadingElement = document.getElementById('loading');
   if (!navigator.geolocation) {
     console.log("Your browser doesn't support geolocation feature!");
   } else {
-    navigator.geolocation.getCurrentPosition(getPosition)
-
+    loadingElement.style.display = 'block';
+    
+    navigator.geolocation.getCurrentPosition(getPosition);
   }
+  
 });
 
 function getPosition(position) {
@@ -63,6 +59,7 @@ function getPosition(position) {
     },
     success: function(data) {
       displayGyms(data.results);
+      document.querySelector('#loading').style.display = 'none';
     },
     error: function(jqXHR, textStatus, errorThrown) {
       console.error('Error searching for gyms:', errorThrown);
@@ -107,6 +104,7 @@ fetch(`https://api.tomtom.com/search/2/poiSearch/gym.json?key=${API_KEY}&lat=${l
 
 
 map.on('click', function(e) {
+  
   // Remove existing marker, if any
   if (marker != undefined) {
       map.removeLayer(marker);
