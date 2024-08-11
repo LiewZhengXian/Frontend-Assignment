@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -120,6 +120,11 @@ h2 span {
     height: 300px;
     background-color: #FFF;
     scroll-snap-align: center;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
 }
 
 .button {
@@ -157,7 +162,6 @@ h2 span {
     border: 1px solid #ddd;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-
 }
 
 .content img {
