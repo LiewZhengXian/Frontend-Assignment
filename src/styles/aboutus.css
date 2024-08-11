@@ -11,7 +11,23 @@ header.masthead {
     height: 100vh; /* Make the header height 100% of the viewport height */
     overflow: hidden; /* Hide any overflow content */
 }
+@media (max-width: 768px) {
+    .header-text-box {
+        margin: 20px auto; /* Adjust margin */
+        padding: 10px; /* Adjust padding */
+        text-align: center; /* Center text */
+    }
+    
+    /* Ensure full width of elements */
+    .col-lg-10, .col-lg-8 {
+        width: 100%;
+    }
 
+    #video-background {
+        height: auto; /* Ensure the video scales properly */
+        width: 100vw;
+    }
+}
 #video-background {
     position: absolute;
     top: 50%;
