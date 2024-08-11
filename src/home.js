@@ -121,3 +121,17 @@ sr.reveal('#testimonial',{
     origin: 'top',
     distance: '300px'
 });
+
+var backToTopBtn = document.getElementById('back-to-top');
+window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "flex";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+};
+
+backToTopBtn.addEventListener('click', function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+});
