@@ -1,5 +1,8 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function() {
+      // Show the loading screen
+
+
     const contactForm = document.getElementById('contactForm');
 
     contactForm.addEventListener('submit', function(e) {
