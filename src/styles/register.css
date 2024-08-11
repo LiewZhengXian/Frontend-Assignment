@@ -1,18 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     background-image: url('../images/join-background.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
     background-color: #aec7e0; /* Fallback color */
-    padding-top: 60px; /* Adjust padding to match the height of your navbar */
 }
 
 @media (min-width: 992px) {
     body {
       padding-top: 70px; /* Adjust this value based on the height of your navbar on larger screens */
     }
-  }
-  
+}
+
+.container {
+    flex: 1; /* Allow the main content to grow and push the footer to the bottom */
+}
+
 .form-container {
     max-width: 350px;
     margin: auto;
@@ -21,6 +30,14 @@ body {
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 .social-login-btn {

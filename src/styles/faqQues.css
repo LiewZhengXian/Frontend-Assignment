@@ -46,6 +46,7 @@ body {
     overflow: hidden;
     color: white;
     text-align: center;
+    padding-top: 80px;
 }
 
 #video-background {
