@@ -10,25 +10,54 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">FitLife</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="home.html#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="aboutus.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="ourteam.html">Our Team</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        
-                    
-                </ul>
-            </div>
+          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Center the menu items -->
+              <li class="nav-item"><a class="nav-link" href="home.html#home">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="home.html#features" id="dropdownHealthTips" role="button" aria-expanded="false">
+                  Features
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownHealthTips">
+                  <a href="fatlosstips.html">Workout Program</a>
+                  <a href="food.html">Food Recommendations</a>
+                  <a href="product.html">Product Recommendation</a>
+                  <a href="calculatorpage.html">Health Calculator</a>
+                  <a href="findgym.html">Find Gym</a>
+                  <a href="membership.html">Membership</a>
+    
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="faqQues.html">FAQ</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownAbout" role="button" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownAbout">
+                  <a href="aboutus.html">About Us</a>
+                  <a href="ourteam.html">Our Team</a>
+                </div>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="profile.html" id="dropdownProfile" role="button" aria-expanded="false">
+                  <i class="bi bi-person profile-icon"></i> Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownProfile">
+                  <a href="register.html">Join Us</a>
+                  <a href="login.html">Sign In</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+    
 
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
         <div class="container">
