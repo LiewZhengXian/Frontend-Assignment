@@ -12,16 +12,72 @@ header.masthead {
     overflow: hidden; /* Hide any overflow content */
 }
 
+/* About Us Section */
+#aboutus-youth-section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+}
+
 #video-background {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* Ensures the video covers the entire area */
     transform: translate(-50%, -50%);
-    object-fit: cover; /* Ensure the video covers the container */
-    object-position: center; /* Center the video in the container */
+    z-index: -1; /* Ensure the video is behind the content */
+}
+
+#aboutus-youth-section .content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the video */
+    max-width: 1200px; /* Adjust max width as needed */
+    margin: 0 auto;
+    padding: 20px;
+    color: rgb(255, 255, 255); /* Black color for text */
+    text-align: center; /* Center align text */
+}
+
+#aboutus-youth-section h1 {
+    font-family: 'Your Font', sans-serif; /* Replace with your actual font */
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+#aboutus-youth-section p {
+    font-family: 'Your Font', sans-serif; /* Replace with your actual font */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem; /* Add some space below paragraph */
+}
+
+#aboutus-youth-section .button-container {
+    margin-top: 2rem; /* Add space above the button section */
+}
+
+#aboutus-youth-section .btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#aboutus-youth-section .btn:hover {
+    background-color: #000000;
 }
 
 .text-box {
