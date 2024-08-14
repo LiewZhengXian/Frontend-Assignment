@@ -1,8 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
 .hero {
@@ -13,7 +11,7 @@ body {
     margin: auto;
     height:100vh;
     padding: 2rem;
-    background-image: linear-gradient(to right, rgb(17, 144, 138), white);
+    background-image: linear-gradient(150deg , rgb(17, 121, 144),rgb(111, 203, 172), white);
 }
 
 .hero-content {
@@ -28,6 +26,9 @@ body {
     flex: 1;
     text-align: right;
     border-style: outset;
+    margin-left: 50px;
+    position: relative;
+    animation: fadeIn-right 1.25s ease-in-out;
 }
 
 .photo img {
@@ -39,6 +40,8 @@ body {
 .title {
     padding: 20px;
     text-align: left;
+    position: relative;
+    animation: fadeIn-left 1.25s ease-in-out;
 }
 
 .title h2 {
@@ -56,6 +59,7 @@ h2 span {
     font-size: large;
     font-weight: 400;
     color: whitesmoke;
+    text-align: justify;
     margin-bottom: 1.5rem;
 }
 
@@ -73,6 +77,8 @@ h2 span {
     padding: 2rem 40px;
     position: relative;
     margin-top: 2rem;
+    animation: fadeIn-up 0.75s ease-in-out;
+    animation-play-state: paused;
 }
 
 .featured h2 {
@@ -90,7 +96,6 @@ h2 span {
     color: inherit;
 }
 
-
 @media (max-width: 768px) {
     .item {
         min-width: 150px;
@@ -104,6 +109,12 @@ h2 span {
     overflow: hidden;
     margin-top: 1rem;
     padding-left: 0;
+    animation: fadeIn-up 1.25s ease-in-out;
+}
+
+@keyframes fadeIn-up {
+    from { bottom: -100px; opacity: 0; }
+    to { bottom : 0px; opacity: 1; }
 }
 
 .list {
@@ -149,7 +160,7 @@ h2 span {
     transform: translateY(-50%);
     z-index: 1;
 }
-  
+
 .button--previous {
     left: 0;
     transform: translateY(-50%) rotate(180deg);
@@ -190,9 +201,20 @@ h2 span {
     text-align: center;
 }
 
-.food-and-nutrition, .recipes {
+.food-and-nutrition {
+    position: relative;
     padding: 2rem;
     align-items: center;
+    animation: fadeIn-right 0.75s ease-in-out;
+    animation-play-state: paused;
+}
+
+.recipes {
+    position: relative;
+    padding: 2rem;
+    align-items: center;
+    animation: fadeIn-left 0.75s ease-in-out;
+    animation-play-state: paused;
 }
 
 .food-and-nutrition .photo2 img, .recipes .photo3 img {
@@ -227,15 +249,14 @@ h2 span {
     border-bottom: 2px solid lightgray;
 }
 
-.header-section h2 {
-    margin-bottom: 30px;
+.header-section h1 {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
 .header-section .view-more {
     text-decoration: none;
-    color: #333;
+    color: #7a7979;
     font-weight: 600;
     margin-left: 10px;
     margin-bottom: 5px;
@@ -250,11 +271,16 @@ h2 span {
 .description p {
     margin-top: 10px;
     color: #555;
-}
-
-.description-text {
-    margin-top: 20px;
-    color: #555;
     font-size: 1rem;
     text-align: justify;
+}
+
+@keyframes fadeIn-right {
+    from { right: -200px; opacity: 0; }
+    to { right : 0px; opacity: 1; }
+}
+
+@keyframes fadeIn-left {
+    from { left: -200px; opacity: 0; }
+    to { left : 0px; opacity: 1; }
 }

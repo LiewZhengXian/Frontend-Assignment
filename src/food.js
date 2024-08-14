@@ -16,3 +16,46 @@ document.addEventListener('DOMContentLoaded', function() {
         list.scrollBy({ left: itemWidth, behavior: "smooth" });
     }, 10000);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const featuredSection = document.getElementById("featured-section");
+    const foodAndNutrition = document.getElementById("food-and-nutrition-section");
+    const recipe = document.getElementById("recipes-section");
+
+    const observerOptions = {
+        root: null, // relative to the viewport
+        rootMargin: "0px",
+        threshold: 0.01 // Trigger when 10% of the section is visible
+    };
+
+    const observer1 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                featuredSection.style.animationPlayState = 'running';
+                observer1.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const observer2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                foodAndNutrition.style.animationPlayState = 'running';
+                observer2.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const observer3 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                recipe.style.animationPlayState = 'running';
+                observer3.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer1.observe(featuredSection);
+    observer2.observe(foodAndNutrition);
+    observer3.observe(recipe);
+});
