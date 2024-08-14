@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         const height = parseFloat(document.getElementById('height').value);
         const weight = parseFloat(document.getElementById('weight').value);
-        
+        if(typeof (Storage)!== "undefined"){
         sessionStorage.setItem('height', height);
         sessionStorage.setItem('weight', weight);
-
+        }
         const bmi = calculateBMI(height, weight);
         const bmiCategory = getBMICategory(bmi);
         document.getElementById('bmiResult').innerHTML = `
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const height = parseFloat(document.getElementById('calorieHeight').value);
         const weight = parseFloat(document.getElementById('calorieWeight').value);
         const activity = parseFloat(document.getElementById('activity').value);
-
+        if(typeof (Storage)!== "undefined"){
         sessionStorage.setItem('age', age);
         sessionStorage.setItem('gender', gender);
         sessionStorage.setItem('calorieHeight', height);
         sessionStorage.setItem('calorieWeight', weight);
         sessionStorage.setItem('activity', activity);
-
+        }
         const calories = calculateCalories(age, gender, height, weight, activity);
         document.getElementById('calorieResult').innerHTML = `
             <p>Your estimated daily calorie needs: <strong>${calories.toFixed(0)} calories</strong></p>
@@ -79,14 +79,14 @@ document.addEventListener('DOMContentLoaded', function() {
         const weight = parseFloat(document.getElementById('macroWeight').value);
         const activity = parseFloat(document.getElementById('macroActivity').value);
         const goal = document.getElementById('macroGoal').value;
-
+        if(typeof (Storage)!== "undefined"){
         sessionStorage.setItem('macroAge', age);
         sessionStorage.setItem('macroGender', gender);
         sessionStorage.setItem('macroHeight', height);
         sessionStorage.setItem('macroWeight', weight);
         sessionStorage.setItem('macroActivity', activity);
         sessionStorage.setItem('macroGoal', goal);
-
+        }
         if (validateForm(gender, age, height, weight, activity, goal)) {
             const macros = calculateMacros(gender, age, height, weight, activity, goal);
             displayMacros(macros);

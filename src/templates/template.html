@@ -72,7 +72,95 @@
       <p>&copy; 2024 FitLife. All rights reserved.</p>
     </div>
   </footer>
+  <footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>FitLife</h5>
+          <p>Your journey to a healthier lifestyle starts here.</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Share and Follow Us</h5>
+          <ul class="list-inline social-icons">
+            <li class="list-inline-item">
+              <a href="#" class="text-white share-option" data-platform="facebook" aria-label="Share on Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white share-option" data-platform="twitter" aria-label="Share on Twitter">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white share-option" data-platform="linkedin" aria-label="Share on LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#" class="text-white share-option" data-platform="whatsapp" aria-label="Share on WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>&copy; 2024 FitLife. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <style>
+    .social-icons {
+      font-size: 1.5rem;
+    }
+    .social-icons .list-inline-item {
+      margin-right: 1rem;
+    }
+    .social-icons a {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #007bff;  /* Bootstrap primary color */
+    }
+  </style>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const shareLinks = document.querySelectorAll('.share-option');
+    shareLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const platform = this.getAttribute('data-platform');
+        const url = encodeURIComponent(window.location.href);
+        const title = encodeURIComponent(document.title);
+  
+        let shareUrl;
+        switch(platform) {
+          case 'facebook':
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+            break;
+          case 'twitter':
+            shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+            break;
+          case 'linkedin':
+            shareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
+            break;
+          case 'whatsapp':
+            shareUrl = `https://wa.me/?text=${title} ${url}`;
+            break;
+        }
+  
+        window.open(shareUrl, '_blank');
+      });
+    });
+  });
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
