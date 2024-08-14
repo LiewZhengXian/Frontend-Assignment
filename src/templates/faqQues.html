@@ -7,15 +7,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../styles/faqQues.css">
-    <link rel="stylesheet" href="../styles/fatlosstips.css">
-    <link rel="stylesheet" href="../styles/font.css">
     <link rel="stylesheet" href="../styles/template.css">
     
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <a class="navbar-brand" href="home.html#home"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -526,9 +524,9 @@
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
         <div class="container p-4 pb-0">
             <section class="mb-4">
-                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
-                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
-                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/FitlifeGymKL/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="https://x.com/fitlife16" target="_blank" role="button"><i class="bi bi-twitter"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/go_fitlife/?hl=en"target="_blank"  role="button"><i class="bi bi-instagram"></i></a>
                 <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
                 <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
             </section>
@@ -537,11 +535,25 @@
             <p>&copy; 2024 FitLife. All rights reserved.</p>
         </div>
     </footer>
-
+        <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../faqQues.js"></script>
+    <script>
+        window.onscroll = function() {
+            var backToTopButton = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                backToTopButton.style.display = "block";
+            } else {
+                backToTopButton.style.display = "none";
+            }
+        };
+    
+        document.getElementById("back-to-top").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
 </body>
 </html>

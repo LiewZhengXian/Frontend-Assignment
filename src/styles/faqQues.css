@@ -85,18 +85,41 @@ body {
     text-align: right; /* Align text to the right */
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* The button will only display when scrolling */
+    background-color: #15743b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+
+.flip-cards .container {
+    padding: 4rem 0;
+}
+
 .flip-card {
     background-color: transparent;
-    width: 100%;
-    height: 200px; /* Adjust height as needed */
-    perspective: 1000px; /* Remove perspective if not needed */
-    margin-bottom: 20px; /* Add some space between the cards */
+    perspective: 1000px; /* Perspective helps with the 3D effect */
+    margin-bottom: 1rem; /* Space between cards */
 }
 
 .flip-card-inner {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 150px; /* Fixed height for the flip card */
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
@@ -128,4 +151,15 @@ body {
     background-color: #f8f9fa;
     color: black;
     transform: rotateY(180deg);
+}
+
+@media (max-width: 768px) {
+    /* Remove the height adjustments */
+    .flip-card-inner {
+        height: 150px; /* Ensure height remains fixed */
+    }
+
+    .flip-card-front, .flip-card-back {
+        padding: 1rem; /* Adjust padding if necessary */
+    }
 }

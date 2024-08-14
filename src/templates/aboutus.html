@@ -16,7 +16,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
+          <a class="navbar-brand" href="home.html#home"><img src="../images/FitLife.png" alt="FitLife Logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -62,31 +62,24 @@
         </div>
       </nav>
     
-    <section id="aboutus">
-        <header class="masthead">
-            <div class="container h-100">
-                    <div class="row h-100 align-items-center justify-content-center text-center">
-                        <div class="col-lg-10 align-self-end">
-                            <h1 class="text-white font-weight-bold header-text-box">Welcome To FitLife</h1>
-                        </div>
-                        <div class="col-lg-8 align-self-baseline">
-                            <p1 class="text-white font-weight-light mb-5 header-text-box">It's Nice To Meet You</p1>
-                            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#aboutus1">Tell Me More</a>
-                        </div>
-                    </div>
+      <div id="aboutus-youth-section">
+        <video id="video-background" autoplay muted loop>
+            <source src="../videos/bgaboutus.webm" type="video/webm">
+        </video>
+        <div class="content">
+            <h1>Welcome to FITLIFE</h1>
+            <p>It's nice to meet you</p>
+            <div class="button-container">
+                <!-- Link the button to the "aboutus2" section -->
+                <a href="#aboutus2" class="btn">Learn More</a>
             </div>
-            <video autoplay muted loop id="video-background" playsinline>
-                <source src="../videos/bgaboutus.mp4" type="video/mp4">
-                <!-- Fallback content -->
-                <img src="fall.jpg" alt="Background">
-            </video> 
-        </header>
-    </section>
+        </div>
+    </div>
     
     
     
     <div class="container my-5">
-        <section id="aboutus1">
+        <section id="aboutus2">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-box">
@@ -301,9 +294,9 @@
     <footer class="bg-dark text-white text-center py-3" style="margin-top: 2rem;">
         <div class="container p-4 pb-0">
             <section class="mb-4">
-                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/utarconfessions2022/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
-                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i class="bi bi-google"></i></a>
-                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i class="bi bi-instagram"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="https://www.facebook.com/FitlifeGymKL/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="https://x.com/fitlife16" target="_blank" role="button"><i class="bi bi-twitter"></i></a>
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="https://www.instagram.com/go_fitlife/?hl=en" target="_blank"  role="button"><i class="bi bi-instagram"></i></a>
                 <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank" role="button"><i class="bi bi-linkedin"></i></a>
                 <a class="btn text-white btn-floating m-1" style="background-color: #333333;" href="https://github.com/LiewZhengXian/Frontend-Assignment" target="_blank" role="button"><i class="bi bi-github"></i></a>
             </section>
@@ -312,7 +305,7 @@
             <p>&copy; 2024 FitLife. All rights reserved.</p>
         </div>
     </footer>
-
+        <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../jquery-3.7.1.min.js"></script>
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
@@ -320,8 +313,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../home.js"></script>
     <script src="../aboutus.js"></script>
-
     <script>
+            window.onscroll = function() {
+                var backToTopButton = document.getElementById("back-to-top");
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    backToTopButton.style.display = "block";
+                } else {
+                    backToTopButton.style.display = "none";
+                }
+            };
+        
+            document.getElementById("back-to-top").onclick = function() {
+                window.scrollTo({top: 0, behavior: 'smooth'});
+            };
+        </script>
+        <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
