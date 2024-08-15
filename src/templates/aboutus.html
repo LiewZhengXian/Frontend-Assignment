@@ -330,6 +330,41 @@
             document.getElementById("back-to-top").onclick = function() {
                 window.scrollTo({top: 0, behavior: 'smooth'});
             };
+
+             document.addEventListener("DOMContentLoaded", function() {
+                    // Prefill the form if session storage contains data
+                    if (sessionStorage.getItem("name")) {
+                        document.getElementById("name").value = sessionStorage.getItem("name");
+                    }
+                    if (sessionStorage.getItem("email")) {
+                        document.getElementById("email").value = sessionStorage.getItem("email");
+                    }
+                    if (sessionStorage.getItem("phone")) {
+                        document.getElementById("phone").value = sessionStorage.getItem("phone");
+                    }
+                    if (sessionStorage.getItem("message")) {
+                        document.getElementById("message").value = sessionStorage.getItem("message");
+                    }
+    
+                    // Save data to session storage on input change
+                    document.getElementById("name").addEventListener("input", function() {
+                        sessionStorage.setItem("name", this.value);
+                    });
+                    document.getElementById("email").addEventListener("input", function() {
+                        sessionStorage.setItem("email", this.value);
+                    });
+                    document.getElementById("phone").addEventListener("input", function() {
+                        sessionStorage.setItem("phone", this.value);
+                    });
+                    document.getElementById("message").addEventListener("input", function() {
+                        sessionStorage.setItem("message", this.value);
+                    });
+    
+                    // Clear session storage on form submit
+                    document.getElementById("contact-form").addEventListener("submit", function() {
+                        sessionStorage.clear();
+                    });
+                });
         </script>
         <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
