@@ -69,25 +69,28 @@
     </section>
 
     <section class="our-mission-section">
-      <div>
-        <h2>Meet FitLife</h2>
+      <div class="our-mission-section-title">
+        <h2>Meet <br> FitLife</h2>
+      </div>
+      <div class="our-mission-section-desc">
         <p>At FitLife, we’re a passionate group of fitness enthusiasts, nutrition experts, and wellness coaches dedicated to helping you achieve your health goals. With a blend of science-backed advice and real-world experience, our mission is to inspire and guide you on your journey to a healthier, fitter lifestyle.</p>
       </div>
     </section>
 
     <section class="our-core-value">
       <div>
-        <h2>Our Core value</h2>
-        <h1>3I. Triple I.</h1>
-        <ul>
-          <li>Integrity: We provide honest, evidence-based fitness advice.</li>
-          <li>Innovation: We embrace new trends to help you stay ahead in your fitness journey.</li>
-          <li>Inclusivity: We cater to all fitness levels, welcoming everyone to achieve their best.</li>
-        </ul>
+        <h1>Our Core Value</h1>
+        <h2>3I, Triple I.</h2>
+        <div class="row our-core-value-detail">
+          <div class="right1"><p>Integrity</p>We provide honest, evidence-based fitness advice.</div>
+          <div class="left"><p>Innovation</p> We embrace new trends to help you stay ahead in your fitness journey.</div>
+          <div class="right2"><p>Inclusivity</p> We cater to all fitness levels, welcoming everyone to achieve their best.</div>
+        </div>
       </div>
     </section>
 
-    <div class="container my-5">
+    <section class="team-member-section">
+      <div class="container">
         <h1 class="text-center mb-5">Our Team</h1>
         <div class="row">
             <div class="col-12 mb-4">
@@ -95,9 +98,6 @@
                     <p>Our team of fitness enthusiasts is dedicated to bringing you the best tips and advice for a healthier, more active lifestyle.</p>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
         </div>
 
         <div class="row align-item-center">
@@ -109,7 +109,14 @@
                 </div>
                 <div class="team-member-details mt-3" style="display: none;">
                     <p>Liew Zheng Xian leads our team with a vision to create a comprehensive wellness platform. His strategic direction ensures that our content is not only informative but also transformative, empowering individuals to make lasting lifestyle changes.</p>
-                    <p>Related link: <a href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank">LinkedIn Profile</a></p>
+                    <p>Related link:                       <a
+                      data-mdb-ripple-init
+                      class="btn text-white btn-floating m-1"
+                      style="background-color: #0082ca;"
+                      href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank"
+                      role="button"
+                      ><i class="bi bi-linkedin"></i>
+                      </a></p>
                 </div>
             </div>
             <div class="col mb-4">
@@ -120,7 +127,14 @@
                 </div>
                 <div class="team-member-details mt-3" style="display: none;">
                     <p>Lee Chorng Huah is the creative force behind our fitness strategies. He develops innovative programs and content that push the boundaries of traditional fitness, keeping our audience engaged and excited about their wellness journey.</p>
-                    <p>Related link: <a href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank">LinkedIn Profile</a></p>
+                    <p>Related link:                       <a
+                      data-mdb-ripple-init
+                      class="btn text-white btn-floating m-1"
+                      style="background-color: #0082ca;"
+                      href="https://www.linkedin.com/in/leechornghuah/" target="_blank"
+                      role="button"
+                      ><i class="bi bi-linkedin"></i>
+                      </a></p>
                 </div>
             </div>
         </div>
@@ -133,7 +147,16 @@
                 </div>
                 <div class="team-member-details mt-3" style="display: none;">
                     <p>Ler Jun Wei is dedicated to maximizing health outcomes for our community. His expertise in personalizing fitness tips and advice ensures that each individual can achieve their goals in the most effective and sustainable way possible.</p>
-                    <p>Related link: <a href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank">LinkedIn Profile</a></p>
+                    <p>Related link:             
+                      <a
+                      data-mdb-ripple-init
+                      class="btn text-white btn-floating m-1"
+                      style="background-color: #0082ca;"
+                      href="https://www.linkedin.com/in/ler-jun-wei-875343306/" target="_blank"
+                      role="button"
+                      ><i class="bi bi-linkedin"></i>
+                      </a>
+                    </p>
                 </div>
             </div>
             <div class="col mb-4">
@@ -144,20 +167,28 @@
                 </div>
                 <div class="team-member-details mt-3" style="display: none;">
                     <p>Tan Kai Jun is passionate about promoting an active lifestyle. He crafts and executes strategies that inspire our audience to embrace fitness as a joyful and integral part of their daily lives, ensuring long-term commitment to health and wellness.</p>
-                    <p>Related link: <a href="https://www.linkedin.com/in/liew-zheng-xian-687860312/" target="_blank">LinkedIn Profile</a></p>
+                    <p>Related link:                       <a
+                      data-mdb-ripple-init
+                      class="btn text-white btn-floating m-1"
+                      style="background-color: #0082ca;"
+                      href="https://www.linkedin.com/in/tan-kai-jun-87170029a/" target="_blank"
+                      role="button"
+                      ><i class="bi bi-linkedin"></i>
+                      </a></p>
                 </div>
             </div>            
         </div>
-    </div>
+      </div>
 
-    <div id="detailOverlay" class="overlay">
+      <div id="detailOverlay" class="overlay">
         <div class="detail-content">
             <span class="close-btn" onclick="hideDetail()">&times;</span>
             <img id="detailImage" src="" alt="Team Member">
             <h2 id="detailName"></h2>
             <p id="detailDescription"></p>
         </div>
-    </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-3"  style="margin-top: 2rem;">
