@@ -4,11 +4,17 @@ document.getElementById('consent').addEventListener('change', function () {
 
 document.getElementById('newsletter-info').addEventListener('submit', function (event) {
   event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+
+  sessionStorage.setItem('newsletterName', name);
+  sessionStorage.setItem('newsletterEmail', email);
+
   document.querySelector('.newsletter-title').classList.add('blur');
   document.querySelector('.newsletter-success').style.display = 'block';
 });
 
-// Adding placeholders to inputs
 document.getElementById("name").setAttribute("placeholder", "Name");
 document.getElementById("email").setAttribute("placeholder", "Email Address");
 
