@@ -37,3 +37,41 @@ document.querySelectorAll('.team-member').forEach(member => {
         showDetail(this);
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const ourMissionSection = document.getElementById("our-mission-section-id");
+    const ourCoreSection = document.getElementById("our-core-value-id");
+
+    const observerOptions = {
+        root: null, // relative to the viewport
+        rootMargin: "0px",
+        threshold: 0.01 // Trigger when 10% of the section is visible
+    };
+
+    const observer1 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                ourMissionSection.style.animationPlayState = 'running';
+                console.log("Our Mission section is intersecting");
+                entry.target.querySelectorAll('.our-mission-section-title, .our-mission-section-desc').forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
+                observer1.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const observer2 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('h1, h2, .our-core-value-detail > div').forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
+                observer2.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer1.observe(ourMissionSection);
+    observer2.observe(ourCoreSection);
+});
