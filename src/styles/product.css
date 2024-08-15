@@ -82,42 +82,9 @@ body {
     }
 }
 
-.container {
-    width: 100%;
-    padding: 20px;
-}
-
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-h4 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-p {
-    text-align: center;
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-}
-
-.row {
-    display: flex;
-    justify-content: space-around;
-}
-
-.col {
-    flex: 0 0 33%;
-    max-width: 33%;
-}
-
 .newsletter {
   padding: 40px;
-  position: relative; /* Add this to ensure proper positioning */
+  position: relative;
 }
 
 .newsletter-title h2 {
@@ -180,11 +147,45 @@ p {
   pointer-events: none;
 }
 
+.container-product-list{
+    width: 100%;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col {
+    flex: 0 0 33%;
+    max-width: 33%;
+}
+
 .product-list {
     width: 100%;
     max-height: 600px; 
     overflow-y: scroll; 
     padding: 10px;
+    margin-left: 10px;
 }
 
 .product-list::-webkit-scrollbar {
