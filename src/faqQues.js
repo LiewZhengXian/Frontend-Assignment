@@ -52,3 +52,62 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Prefill the form if session storage contains data
+    if (sessionStorage.getItem("email")) {
+        document.getElementById("email").value = sessionStorage.getItem("email");
+    }
+    if (sessionStorage.getItem("phone")) {
+        document.getElementById("phone").value = sessionStorage.getItem("phone");
+    }
+    if (sessionStorage.getItem("name")) {
+        document.getElementById("name").value = sessionStorage.getItem("name");
+    }
+    if (sessionStorage.getItem("dob")) {
+        document.getElementById("dob").value = sessionStorage.getItem("dob");
+    }
+    if (sessionStorage.getItem("todays-date")) {
+        document.getElementById("todays-date").value = sessionStorage.getItem("todays-date");
+    }
+    if (sessionStorage.getItem("signature")) {
+        document.getElementById("signature").value = sessionStorage.getItem("signature");
+    }
+
+    // Store data in session storage on input change
+    document.getElementById("email").addEventListener("input", function() {
+        sessionStorage.setItem("email", this.value);
+    });
+    document.getElementById("phone").addEventListener("input", function() {
+        sessionStorage.setItem("phone", this.value);
+    });
+    document.getElementById("name").addEventListener("input", function() {
+        sessionStorage.setItem("name", this.value);
+    });
+    document.getElementById("dob").addEventListener("input", function() {
+        sessionStorage.setItem("dob", this.value);
+    });
+    document.getElementById("todays-date").addEventListener("input", function() {
+        sessionStorage.setItem("todays-date", this.value);
+    });
+    document.getElementById("signature").addEventListener("input", function() {
+        sessionStorage.setItem("signature", this.value);
+    });
+
+    // Store radio button choices
+    document.querySelectorAll('input[type="radio"]').forEach(function(radio) {
+        radio.addEventListener("change", function() {
+            sessionStorage.setItem(this.name, this.value);
+        });
+
+        // Prefill radio buttons
+        if (sessionStorage.getItem(radio.name) === radio.value) {
+            radio.checked = true;
+        }
+    });
+
+    // Clear session storage on form submit
+    document.getElementById("health-form").addEventListener("submit", function() {
+        sessionStorage.clear();
+    });
+});
+
