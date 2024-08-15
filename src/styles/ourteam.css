@@ -1,3 +1,45 @@
+.our-team-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../images/ourteamheader.jpg");
+    background-size: cover;
+    background-position: center;
+    border-bottom: 100px rgb(0, 255, 119);
+}
+
+.our-team-section-bg {
+    display: flex;
+    position: static;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.9;
+    backdrop-filter: blur(1000px);
+    padding: 40px;
+    margin-right: auto;
+    margin-top: auto;
+    border-top-right-radius: 10px;
+}
+
+.our-team-section-detail h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.our-team-section-detail p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .team-description {
     text-align: center;
 }
@@ -9,7 +51,8 @@
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    height: 350px;
+    height: 500px;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,8 +67,8 @@
 }
 
 .team-member img {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     margin: 0 auto 10px;
 }
