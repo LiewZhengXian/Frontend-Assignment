@@ -1,3 +1,17 @@
+document.getElementById('consent').addEventListener('change', function () {
+  document.getElementById('submit-btn').disabled = !this.checked;
+});
+
+document.getElementById('newsletter-info').addEventListener('submit', function (event) {
+  event.preventDefault();
+  document.querySelector('.newsletter-title').classList.add('blur');
+  document.querySelector('.newsletter-success').style.display = 'block';
+});
+
+// Adding placeholders to inputs
+document.getElementById("name").setAttribute("placeholder", "Name");
+document.getElementById("email").setAttribute("placeholder", "Email Address");
+
 document.addEventListener('DOMContentLoaded', function() {
     const list = document.querySelector(".list");
     const item = document.querySelector(".item");
