@@ -1,22 +1,48 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function() {
-      // Show the loading screen
-
-
     const contactForm = document.getElementById('contactForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    // Prefill the form if session storage contains data
+    if (sessionStorage.getItem("contactName")) {
+        nameInput.value = sessionStorage.getItem("contactName");
+    }
+    if (sessionStorage.getItem("contactEmail")) {
+        emailInput.value = sessionStorage.getItem("contactEmail");
+    }
+    if (sessionStorage.getItem("contactMessage")) {
+        messageInput.value = sessionStorage.getItem("contactMessage");
+    }
+
+    // Store data in session storage on input change
+    nameInput.addEventListener("input", function() {
+        sessionStorage.setItem("contactName", this.value);
+    });
+    emailInput.addEventListener("input", function() {
+        sessionStorage.setItem("contactEmail", this.value);
+    });
+    messageInput.addEventListener("input", function() {
+        sessionStorage.setItem("contactMessage", this.value);
+    });
 
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const name = nameInput.value;
+        const email = emailInput.value;
+        const message = messageInput.value;
 
         if (validateForm(name, email, message)) {
             // Here you would typically send the form data to a server
             console.log('Form submitted:', { name, email, message });
             alert('Thank you for your message! We will get back to you soon.');
+            
+            // Clear the form and session storage
             contactForm.reset();
+            sessionStorage.removeItem("contactName");
+            sessionStorage.removeItem("contactEmail");
+            sessionStorage.removeItem("contactMessage");
         }
     });
 
