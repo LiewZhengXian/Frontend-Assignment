@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const teamMemberSection = document.getElementById("team-member-section-id");
 
     const observerOptions = {
-        root: null, // relative to the viewport
+        root: null,
         rootMargin: "0px",
-        threshold: 0.01 // Trigger when 10% of the section is visible
+        threshold: 0.01
     };
 
     const observer1 = new IntersectionObserver((entries, observer) => {
