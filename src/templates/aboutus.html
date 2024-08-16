@@ -310,13 +310,45 @@
         </div>
     </footer>
         <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
     <script src="../jquery-3.7.1.min.js"></script>
     <script src="https://hcaptcha.com/1/api.js" async defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="../home.js"></script>
     <script src="../aboutus.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // These IDs from the previous steps
+            var userID = '5ZjcY3K3U7jYy9TXU';
+            var serviceID = 'service_5p5vbti';
+            var templateID = 'template_ed96sc5';
+
+            const formData = {
+                from_name: document.getElementById('name').value,
+                reply_to: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+            };
+
+            // Initialize EmailJS with your user ID inside the submit event
+            emailjs.init(userID);
+
+            // Send email using EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(function() {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Failed to send email. Please try again later.');
+                });
+        });
+
+
+    </script>
     <script>
             window.onscroll = function() {
                 var backToTopButton = document.getElementById("back-to-top");
@@ -365,8 +397,8 @@
                         sessionStorage.clear();
                     });
                 });
-        </script>
-        <script>
+    </script>
+    <script>
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
@@ -380,5 +412,6 @@
             window.location.reload();
         });
     </script>
+    
 </body>
 </html>
