@@ -70,8 +70,10 @@ function loadMore(id) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const featuredSection = document.getElementById("featured-section");
     const newsLetter = document.getElementById("newsletter-section");
+    const fitnessProductSection = document.getElementById("fitness-and-product-section");
+    const vitaminsSupplementsSection = document.getElementById("vitamins-and-supplements-section");
+    const personalTrainingSection = document.getElementById("personal-training-section");
 
     const observerOptions = {
         root: null, // relative to the viewport
@@ -82,7 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer1 = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                featuredSection.style.animationPlayState = 'running';
+                console.log("sup");
+                newsLetter.style.animationPlayState = 'running';
                 observer1.unobserve(entry.target);
             }
         });
@@ -91,13 +94,32 @@ document.addEventListener("DOMContentLoaded", function() {
     const observer2 = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log("sup");
-                newsLetter.style.animationPlayState = 'running';
+                fitnessProductSection.style.animationPlayState = 'running';
                 observer2.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    observer1.observe(featuredSection);
-    observer2.observe(newsLetter);
+    const observer3 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                vitaminsSupplementsSection.style.animationPlayState = 'running';
+                observer3.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const observer4 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                personalTrainingSection.style.animationPlayState = 'running';
+                observer4.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    observer1.observe(newsLetter);
+    observer2.observe(fitnessProductSection);
+    observer3.observe(vitaminsSupplementsSection);
+    observer4.observe(personalTrainingSection);
 });
