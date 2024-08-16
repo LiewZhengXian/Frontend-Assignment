@@ -69,6 +69,25 @@ function loadMore(id) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll(".featured");
+
+    sections.forEach(section => {
+        const list = section.querySelector(".list");
+        const item = section.querySelector(".item");
+        const itemWidth = item.offsetWidth;
+
+        section.querySelector(".button--previous").addEventListener("click", function() {
+            list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+        });
+
+        section.querySelector(".button--next").addEventListener("click", function() {
+            list.scrollBy({ left: itemWidth, behavior: "smooth" });
+        });
+
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const newsLetter = document.getElementById("newsletter-section");
     const fitnessProductSection = document.getElementById("fitness-and-product-section");
