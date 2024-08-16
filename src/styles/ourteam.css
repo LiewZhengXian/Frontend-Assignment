@@ -34,6 +34,7 @@
   position: relative;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 135px;
   padding: 80px 40px;
   width: 100%;
   border-top-right-radius: 10px;
@@ -63,9 +64,10 @@
 .our-mission-section {
     position: relative;
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 50vh; 
     width: 100%;
     overflow: hidden;
     backdrop-filter: blur(8px);
@@ -96,11 +98,11 @@
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     background-color: black;
     z-index: 1;
-    padding: 15vw;
-    margin-right: auto;
-    height: 100%;
+    padding: 5vh 5vw; 
+    width: 100%; 
     text-align: center;
     animation: fadeIn-left 1s ease-in-out;
     animation-play-state: paused;
@@ -118,20 +120,21 @@
     background-image: url("../images/ourmissionsection.jpg");
     background-size: cover;
     background-position: center;
-    font-size: 6.5rem;
-    font-weight:700;
+    font-size: 3rem; 
+    font-weight: 700;
     z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .our-mission-section-desc {
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     text-align: center;
     z-index: 1;
-    padding-right: 120px;
-    height: 100%;
-    margin-left: auto;
+    padding: 5vh 5vw; 
+    width: 100%; 
     animation: fadeIn-right 1s ease-in-out;
     animation-play-state: paused;
 }
@@ -142,12 +145,47 @@
 }
 
 .our-mission-section-desc p {
-    align-items: right;
-    text-align: center;
-    font-size: 1.75rem;
+    font-size: 1.25rem; 
     color: whitesmoke;
     max-width: 600px;
-    padding-left: 100px;
+    margin: 0 auto; 
+    line-height: 1.5;
+}
+
+@media only screen and (min-width: 769px) {
+    .our-mission-section {
+        flex-direction: row; 
+    }
+
+    .our-mission-section::before {
+        height: 100vh; 
+    }
+
+    .our-mission-section-title,
+    .our-mission-section-desc {
+        width: 50%; 
+        height: 100vh; 
+    }
+
+    .our-mission-section-title h2 {
+        font-size: 6.5rem; 
+    }
+
+    .our-mission-section-desc p {
+        font-size: 1.75rem; 
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .our-mission-section-title h2 {
+        font-size: 3rem; 
+    }
+
+    .our-mission-section-desc p {
+        font-size: 1rem; 
+    }
 }
 
 .our-core-value {
@@ -318,6 +356,14 @@
 .team-member p {
     font-size: 1.2rem;
     color: whitesmoke;
+}
+
+@media only screen and (max-width: 480px) {
+    .team-member-content {
+        align-items: center;
+        justify-content: center;
+        padding-right: 75px;
+    }
 }
 
 .overlay {
