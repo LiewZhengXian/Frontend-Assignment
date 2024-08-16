@@ -41,12 +41,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const featuredSection = document.getElementById("featured-section");
     const foodAndNutrition = document.getElementById("food-and-nutrition-section");
     const recipe = document.getElementById("recipes-section");
+    const newsLetter = document.getElementById("newsletter-section");
 
     const observerOptions = {
         root: null, // relative to the viewport
         rootMargin: "0px",
         threshold: 0.01 // Trigger when 10% of the section is visible
     };
+
+    const observer4 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log("sup");
+                newsLetter.style.animationPlayState = 'running';
+                observer4.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
 
     const observer1 = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
@@ -78,4 +89,5 @@ document.addEventListener("DOMContentLoaded", function() {
     observer1.observe(featuredSection);
     observer2.observe(foodAndNutrition);
     observer3.observe(recipe);
+    observer4.observe(newsLetter);
 });

@@ -71,11 +71,29 @@ h2 span {
     .title p {
         font-size: medium;
     }
+
+    .photo, .photo2, .photo3 {
+        margin-left: 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    .photo img, .photo2 img, .photo3 img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
 .newsletter {
   padding: 40px;
-  position: relative; /* Add this to ensure proper positioning */
+  position: relative;
+  animation: fadeIn-up 1s ease-in-out;
+  animation-play-state: paused;
+}
+
+.newsletter-title {
+    position: relative;
 }
 
 .newsletter-title h2 {

@@ -85,6 +85,13 @@ body {
 .newsletter {
   padding: 40px;
   position: relative;
+  animation: fadeIn-up 1s ease-in-out;
+  animation-play-state: paused;
+}
+
+@keyframes fadeIn-up {
+    from { bottom: -100px; opacity: 0; }
+    to { bottom : 0px; opacity: 1; }
 }
 
 .newsletter-title h2 {
