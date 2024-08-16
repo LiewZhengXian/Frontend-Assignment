@@ -255,6 +255,7 @@
     position: relative;
     color: whitesmoke;
     animation: fadeIn-up-core 1.25s ease-in-out;
+    animation-play-state: paused;
 }
 
 .row {
@@ -269,6 +270,7 @@
     color: whitesmoke;
     font-size: 1.5rem;
     animation: fadeIn-up-core 1.5s ease-in-out;
+    animation-play-state: paused;
 }
 
 .team-member {
@@ -286,6 +288,7 @@
     justify-content: space-between;
     margin-left: 65px;
     animation: fadeIn-up-core 1.75s ease-in-out;
+    animation-play-state: paused;
 }
 
 .team-member:hover {

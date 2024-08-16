@@ -41,6 +41,7 @@ document.querySelectorAll('.team-member').forEach(member => {
 document.addEventListener("DOMContentLoaded", function() {
     const ourMissionSection = document.getElementById("our-mission-section-id");
     const ourCoreSection = document.getElementById("our-core-value-id");
+    const teamMemberSection = document.getElementById("team-member-section-id");
 
     const observerOptions = {
         root: null, // relative to the viewport
@@ -52,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 ourMissionSection.style.animationPlayState = 'running';
-                console.log("Our Mission section is intersecting");
                 entry.target.querySelectorAll('.our-mission-section-title, .our-mission-section-desc').forEach(el => {
                     el.style.animationPlayState = 'running';
                 });
@@ -72,6 +72,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, observerOptions);
 
+    const observer3 = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.team-member-section h1, .team-description, .team-member').forEach(el => {
+                    el.style.animationPlayState = 'running';
+                });
+                observer3.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
     observer1.observe(ourMissionSection);
     observer2.observe(ourCoreSection);
+    observer3.observe(teamMemberSection);
 });
