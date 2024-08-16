@@ -31,6 +31,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
         }
     }
+    function saveToSessionStorage(event) {
+        const element = event.target;
+        const sessionKey = element.id;
+        const value = element.value;
+        sessionStorage.setItem(sessionKey, value);
+    }
+    
+    // Add event listeners to all form fields
+    formFields.forEach(field => {
+        const element = document.getElementById(field.elementId);
+        if (element) {
+            element.addEventListener('input', saveToSessionStorage);
+        }
+    });
+    
     formFields.map(setFormValueFromSessionStorage);
     //Session
     bmiForm.addEventListener('submit', function(e) {
