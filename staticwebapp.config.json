@@ -1,5 +1,0 @@
-{
-    "navigationFallback": {
-      "rewrite": "/src/templates/home.html"
-    }
-  }
