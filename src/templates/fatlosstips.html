@@ -604,10 +604,10 @@
         <!-- Copyright -->
       </footer>
         <button class="back-to-top" id="back-to-top"><i class="bi bi-arrow-up"></i></button>
+    <script src="../fatlosstips.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../fatlosstips.js"></script>
     <script src="../food.js"></script>
     <script>
         window.onscroll = function() {
@@ -622,8 +622,6 @@
         document.getElementById("back-to-top").onclick = function() {
             window.scrollTo({top: 0, behavior: 'smooth'});
         };
-    </script>
-    <script>
       document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
           checkbox.addEventListener('change', () => {
               const selectedCategories = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
@@ -638,6 +636,25 @@
               });
           });
       });
+
+      document.addEventListener('DOMContentLoaded', function() {
+            const list = document.querySelector(".list");
+            const item = document.querySelector(".item");
+            const itemWidth = item.offsetWidth;
+
+            document.querySelector(".button--previous").addEventListener("click", function() {
+                list.scrollBy({ left: -itemWidth, behavior: "smooth" });
+            });
+
+            document.querySelector(".button--next").addEventListener("click", function() {
+                list.scrollBy({ left: itemWidth, behavior: "smooth" });
+            });
+
+            // Auto-scroll every 5 seconds
+            setInterval(function() {
+                list.scrollBy({ left: itemWidth, behavior: "smooth" });
+            }, 10000);
+        });
   </script>
 </body>
 </html>
